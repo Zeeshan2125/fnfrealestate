@@ -82,7 +82,7 @@ const MenuList = ({ addListing }) => {
         </ul> */}
       </li>
       <li className="menu-icon">
-        <Link href="/shop/grid">Property</Link>
+        <Link href="/shop/grid">Projects</Link>
         {/* <ul>
           <li>
             <Link href="/shop">Property</Link>
@@ -134,10 +134,8 @@ const MenuList = ({ addListing }) => {
         </ul> */}
       </li>
       <li className="menu-icon">
-        <Link href="#">
-          News <FaPlus />
-        </Link>
-        <ul>
+        <Link href="/blog/grid">News</Link>
+        {/* <ul>
           <li>
             <Link href="/blog">News</Link>
           </li>
@@ -150,7 +148,7 @@ const MenuList = ({ addListing }) => {
           <li>
             <Link href="/blog/right-sidebar">News Right sidebar</Link>
           </li>
-        </ul>
+        </ul> */}
       </li>
       {/* <li className="menu-icon mega-menu-parent">
         <Link href="#">
@@ -234,11 +232,11 @@ const MenuList = ({ addListing }) => {
         <Link href="/contact">Contact</Link>
       </li>
 
-      {addListing ? (
+      {/* {addListing ? (
         <li className="special-link">
           <Link href="/add-listing">Add Listing</Link>
         </li>
-      ) : null}
+      ) : null} */}
     </ul>
   );
 };

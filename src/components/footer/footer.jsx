@@ -99,12 +99,15 @@ const Footer = function () {
                   <div className="footer-menu">
                     <ul>
                       <li>
+                        <Link href="/">Home</Link>
+                      </li>
+                      <li>
                         <Link href="/about">About</Link>
                       </li>
                       <li>
-                        <Link href="/blog">Blog</Link>
+                        <Link href="/blog/grid">News</Link>
                       </li>
-                      <li>
+                      {/* <li>
                         <Link href="/shop">All Products</Link>
                       </li>
                       <li>
@@ -115,7 +118,7 @@ const Footer = function () {
                       </li>
                       <li>
                         <Link href="/contact">Contact us</Link>
-                      </li>
+                      </li> */}
                     </ul>
                   </div>
                 </div>
@@ -126,9 +129,9 @@ const Footer = function () {
                   <div className="footer-menu">
                     <ul>
                       <li>
-                        <Link href="/order-tracking">Order tracking</Link>
+                        <Link href="/shop/grid">Projects</Link>
                       </li>
-                      <li>
+                      {/* <li>
                         <Link href="/wishlist">Wish List</Link>
                       </li>
                       <li>
@@ -142,7 +145,7 @@ const Footer = function () {
                       </li>
                       <li>
                         <Link href="/about">Promotional Offers</Link>
-                      </li>
+                      </li> */}
                     </ul>
                   </div>
                 </div>
@@ -152,7 +155,7 @@ const Footer = function () {
                   <h4 className="footer-title">Customer Care</h4>
                   <div className="footer-menu">
                     <ul>
-                      <li>
+                      {/* <li>
                         <Link href="/login">Login</Link>
                       </li>
                       <li>
@@ -166,7 +169,7 @@ const Footer = function () {
                       </li>
                       <li>
                         <Link href="/faq">FAQ</Link>
-                      </li>
+                      </li> */}
                       <li>
                         <Link href="/contact">Contact us</Link>
                       </li>
@@ -176,12 +179,12 @@ const Footer = function () {
               </Col>
               <Col xs={12} sm={6} xl={3}>
                 <div className="footer-widget footer-newsletter-widget">
-                  <h4 className="footer-title">Newsletter</h4>
-                  <p>
+                  <h4 className="footer-title">We Accept</h4>
+                  {/* <p>
                     Subscribe to our weekly Newsletter and receive updates via
                     email.
-                  </p>
-                  <div className="footer-newsletter">
+                  </p> */}
+                  {/* <div className="footer-newsletter">
                     <form action="#">
                       <input type="email" name="email" placeholder="Email*" />
                       <div className="btn-wrapper">
@@ -191,8 +194,8 @@ const Footer = function () {
                         </button>
                       </div>
                     </form>
-                  </div>
-                  <h5 className="mt-30">We Accept</h5>
+                  </div> */}
+                  {/* <h5 className="mt-30">We Accept</h5> */}
                   <img src="/img/icons/payment-4.png" alt="Payment Image" />
                 </div>
               </Col>

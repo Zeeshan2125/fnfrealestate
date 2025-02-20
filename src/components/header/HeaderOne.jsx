@@ -117,14 +117,12 @@ const HeaderStyleOne = function ({ SetToggleClassName, topbar }) {
                 </div>
               </Col>
               <Col className="ltn__header-options ltn__header-options-2 mb-sm-20">
-                {/* <!-- header-search-1 --> */}
-                <div className="header-search-wrap">
+                {/* <div className="header-search-wrap">
                   <div
                     className={`header-search-1 ${
                       searchFormOpener ? "search-open" : ""
                     }`}
                   >
-                    {/* search-open */}
                     <div className="search-icon">
                       <span onClick={searchForm}>
                         <FaSearch className="icon-search for-search-show" />
@@ -170,9 +168,9 @@ const HeaderStyleOne = function ({ SetToggleClassName, topbar }) {
                       )}
                     </ul>
                   </div>
-                </div>
+                </div> */}
                 {/* <!-- user-menu --> */}
-                <div className="ltn__drop-menu user-menu">
+                {/* <div className="ltn__drop-menu user-menu">
                   <ul>
                     <li>
                       <Link href="#">
@@ -194,9 +192,9 @@ const HeaderStyleOne = function ({ SetToggleClassName, topbar }) {
                       </ul>
                     </li>
                   </ul>
-                </div>
+                </div> */}
                 {/* <!-- mini-cart --> */}
-                <div className="mini-cart-icon">
+                {/* <div className="mini-cart-icon">
                   <button
                     onClick={cartMenu}
                     className={`ltn__utilize-toggle ${
@@ -204,7 +202,6 @@ const HeaderStyleOne = function ({ SetToggleClassName, topbar }) {
                     }`}
                   >
                     <FaCartArrowDown />
-                    {/* <sup>6</sup> */}
 
                     {cartItems.length > 0 ? (
                       <sup>{cartItems.length}</sup>
@@ -212,7 +209,7 @@ const HeaderStyleOne = function ({ SetToggleClassName, topbar }) {
                       <sup>0</sup>
                     )}
                   </button>
-                </div>
+                </div> */}
                 {/* <!-- mini-cart --> */}
                 {/* <!-- Mobile Menu Button --> */}
                 <div className="mobile-menu-toggle d-xl-none">
