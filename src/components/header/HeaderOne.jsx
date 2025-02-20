@@ -116,7 +116,7 @@ const HeaderStyleOne = function ({ SetToggleClassName, topbar }) {
                   </nav>
                 </div>
               </Col>
-              <Col className="ltn__header-options ltn__header-options-2 mb-sm-20">
+              <Col className="ltn__header-options ltn__header-options-2">
                 {/* <div className="header-search-wrap">
                   <div
                     className={`header-search-1 ${

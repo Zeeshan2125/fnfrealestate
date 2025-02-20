@@ -1828,13 +1828,13 @@
   .ltn__header-5 {
     .site-logo-wrap {
       flex: 0 0 100%;
-      justify-content: center;
-      margin: 10px 0 30px;
+      justify-content: start;
+      // margin: 10px 0 30px;
     }
     .ltn__header-options {
       margin-left: 0;
-      flex: 0 0 100%;
-      justify-content: center;
+      // flex: 0 0 100%;
+      justify-content: end;
     }
   }
   .ltn__header-3 {
