@@ -57,7 +57,7 @@ function HeroSectionStyleOne({ data }) {
         onClose={() => setOpen(false)}
       />
 
-      <div className="ltn__slider-area ltn__slider-3  section-bg-1">
+      <div className="ltn__slider-area ltn__slider-3  section-bg-1" style={ { backgroundColor: "#01356d", color: "whitesmoke" } } >
         <Slider
           {...Herosettings}
           className="ltn__slide-one-active slick-slide-arrow-1 slick-slide-dots-1"
@@ -78,17 +78,17 @@ function HeroSectionStyleOne({ data }) {
                       <div className="col-lg-12 align-self-center">
                         <div className="slide-item-info">
                           <div className="slide-item-info-inner ltn__slide-animation">
-                            <h6 className="slide-sub-title animated">
+                            <h6 className="slide-sub-title animated" style={ {  color: "whitesmoke" } }>
                               <span>
                                 <FaHome />
                               </span>
                               {item.subtitle}
                             </h6>
-                            <h1 className="slide-title animated">
+                            <h1 className="slide-title animated" style={ {  color: "whitesmoke" } }>
                               {item.Title}
                             </h1>
-                            <div className="slide-brief animated">
-                              <p>{item.Desc}</p>
+                            <div className="slide-brief animated" >
+                              <p style={ {  color: "whitesmoke" } } > {item.Desc}</p>
                             </div>
                             <div className="btn-wrapper animated">
                               <Link
@@ -98,22 +98,7 @@ function HeroSectionStyleOne({ data }) {
                                 {item.buttonText}
                               </Link>
 
-                              {item.videoButton ? (
-                                <button
-                                  onClick={() => setOpen(true)}
-                                  className="ltn__video-play-btn bg-white"
-                                >
-                                  {/* <i className="icon-play  ltn__secondary-color"></i> */}
-                                  <FaPlay className="icon-play  ltn__secondary-color" />
-                                </button>
-                              ) : (
-                                <Link
-                                href="/about"
-                                  className="btn btn-transparent btn-effect-3"
-                                >
-                                  {item.learnMoreButtonText}
-                                </Link>
-                              )}
+
                             </div>
                           </div>
                         </div>

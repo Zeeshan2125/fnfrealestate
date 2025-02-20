@@ -11,10 +11,14 @@ function Feature({
   titleSectionData,
   classes,
   headingClasses,
+  white
 }) {
+
+  console.log("data====>", data);
+  
   return (
     <>
-      <div className={`ltn__feature-area pt-115 pb-90 ${classes}`}>
+      <div className={`ltn__feature-area pt-115 pb-90 ${classes}`} style={{ backgroundColor: "#01356d", }}>
         <Container>
           <Row>
             <Col xs={12}>
@@ -22,18 +26,21 @@ function Feature({
                 titleSectionData={titleSectionData}
                 sectionClasses={titleSectionData.sectionClasses}
                 headingClasses={headingClasses}
+                white={white}
               />
             </Col>
           </Row>
           <Row className="justify-content-center">
-            {data.map((item, key) => {
+            {data?.map((item, key) => {
               const slug = productSlug(item.title);
               return (
-                <Col key={key} xs={12} sm={6} lg={4}>
+                <Col key={key} xs={12} sm={6} lg={4} >
                   <div
-                    className={`ltn__feature-item ltn__feature-item-6 text-center bg-white  box-shadow-1 ${
+                   style={{ backgroundColor: "#034e9e" }}
+                    className={`ltn__feature-item ltn__feature-item-6 text-center  box-shadow-1 ${
                       item.active ? "active" : ""
                     }`}
+                   
                   >
                     <div className="ltn__feature-icon">
                       {iconTag ? (
@@ -46,13 +53,13 @@ function Feature({
                         </span>
                       )}
                     </div>
-                    <div className="ltn__feature-info">
-                      <h3>
-                        <Link href={`/service/${slug}`}>{item.title}</Link>
+                    <div className="ltn__feature-info" >
+                      <h3 style={ { color: "whitesmoke" } } >
+                       {item.title}
                       </h3>
-                      <p>{item.shortDescription}</p>
+                      <p style={ { color: "whitesmoke" } }> {item.shortDescription}</p>
 
-                      {servicebtn ? (
+                      {/* {servicebtn ? (
                         <Link
                           className="ltn__service-btn"
                           href={`/service/${slug}`}
@@ -63,7 +70,7 @@ function Feature({
                         </Link>
                       ) : (
                         ""
-                      )}
+                      )} */}
                     </div>
                   </div>
                 </Col>

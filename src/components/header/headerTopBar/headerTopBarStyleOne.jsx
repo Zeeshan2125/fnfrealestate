@@ -8,7 +8,7 @@ import HeaderSocialLinks from "../elements/headerSocialLinks";
 const HeaderTopBarOne = function () {
   return (
     <>
-      <div className="ltn__header-top-area section-bg-6 top-area-color-white---">
+      <div className="ltn__header-top-area top-area-color-white---" style={ { backgroundColor: "#01356d", color: "whitesmoke" } } >
         <Container>
           <Row>
             <Col xs={12} md={7}>

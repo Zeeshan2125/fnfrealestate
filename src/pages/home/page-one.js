@@ -152,9 +152,9 @@ function HomePage(props) {
     return (
         <>
             <LayoutOne topbar={true}>
-                <HeroSectionStyleOne data={Herodata} />
+                <HeroSectionStyleOne data={Herodata} style={{ backgroundColor: "#01356d" }} />
 
-                <CarDealerSearchForm navMenuClass="d-none" customClasses="" />
+                {/* <CarDealerSearchForm navMenuClass="d-none" customClasses="" /> */}
                 {/* <!-- CAR DEALER FORM AREA END -->
 
       <!-- ABOUT US AREA START --> */}

@@ -23,12 +23,27 @@ import testimonialData from "@/data/testimonial";
 import BlogItem from "@/components/blog";
 import blogData from "@/data/blog";
 import featuresData from "@/data/service";
+import { useState } from "react";
+import { title } from "process";
+import TeamItem from "@/components/team";
+import TeamData from '@/data/team';
 
 function HomePage(props) {
   const { products } = useSelector((state) => state.product);
   const featuredProducts = getProducts(products, "buying", "featured", 5);
   const featureData = getProducts(featuresData, "buying", "featured", 3);
+  const agents = getProducts(TeamData, "buying", "featured", 6);
   const { Herodata } = props;
+  const vision = [
+    {
+      title: "Vision",
+      shortDescription: "This is our vison This is our vison This is our vison This is our vison This is our vison This is our vison This is our vison"
+    },
+    {
+      title: "Mission",
+      shortDescription: "This is our Mission This is our Mission This is our Mission This is our Mission This is our Mission This is our Mission"
+    }
+  ]
 
   const SlickArrowLeft = ({ currentSlide, slideCount, ...props }) => (
     <button
@@ -154,34 +169,36 @@ function HomePage(props) {
       <LayoutOne topbar={true}>
         <HeroSectionStyleOne data={Herodata} />
 
-        <CarDealerSearchForm navMenuClass="d-none" customClasses="" />
+        {/* <CarDealerSearchForm navMenuClass="d-none" customClasses="" /> */}
         {/* <!-- CAR DEALER FORM AREA END -->
 
       <!-- ABOUT US AREA START --> */}
         <AboutUsStyleOne sectionSpace="pt-120 pb-90" />
-        {/* <!-- ABOUT US AREA END -->
-
-      <!-- COUNTER UP AREA START --> */}
-        <CounterUp />
-        {/* <!-- COUNTER UP AREA END -->
-
-      <!-- ABOUT US AREA START --> */}
-        <AboutUsStyleTwo sectionSpace="pt-120 pb-90" />
-        {/* <!-- ABOUT US AREA END -->
-
-      <!-- FEATURE AREA START ( Feature - 6) --> */}
         <Feature
           classes="section-bg-1"
           servicebtn={true}
           iconTag={false}
-          data={featureData}
+          data={vision}
+          white={true}
           headingClasses="section-subtitle-2"
           titleSectionData={{
             sectionClasses: "text-center",
-            subTitle: "Our Services",
-            title: "Our Main Focus",
+            subTitle: "Core Values",
+            title: "Our Vision & Mission",
           }}
         />
+        {/* <!-- ABOUT US AREA END -->
+
+      <!-- COUNTER UP AREA START --> */}
+        {/* <CounterUp /> */}
+        {/* <!-- COUNTER UP AREA END -->
+
+      <!-- ABOUT US AREA START --> */}
+        {/* <AboutUsStyleTwo sectionSpace="pt-120 pb-90" /> */}
+        {/* <!-- ABOUT US AREA END -->
+
+      <!-- FEATURE AREA START ( Feature - 6) --> */}
+
         {/* PRODUCT SLIDER AREA START */}
         <div className="ltn__product-slider-area ltn__product-gutter pt-115 pb-90 plr--7">
           <Container fluid>
@@ -244,8 +261,58 @@ function HomePage(props) {
           </Container>
         </div>
         {/* PRODUCT SLIDER AREA END */}
+        <div style={{ backgroundColor: "#01356d", }}>
+          <Container >
+            <div className="ltn__team-area pt-115 pb-90">
+              <Row>
+                <Col lg={12}>
+                  <TitleSection
+                    sectionClasses="text-center"
+                    headingClasses="section-subtitle-2"
+                    titleSectionData={{
+                      subTitle: "Our Team",
+                      title: "Meet Our Wonderful Team",
+                    }}
+                    white={true}
+                  />
+                </Col>
+              </Row>
+              <Row>
+                <Slider
+                  {...testiMonialsettings}
+                  className="ltn__testimonial-slider-5-active slick-arrow-1"
+                >
 
-        <div className="ltn__apartments-plan-area pb-70">
+                  {agents.map((data, key) => {
+                    const slug = productSlug(data.name);
+                    return (
+                      // <Col key={key} xs={12} sm={6} lg={4} >
+                      <TeamItem baseUrl="blog" data={data} slug={slug} additionalClassname="" white={true} />
+                      // </Col>
+                    );
+                  })}
+                  {/* {testimonialData.map((data, key) => {
+                  return <TestimonialCarouselItem key={key} data={data} />;
+                })} */}
+                </Slider>
+                {/* {agents.map((data, key) => {
+                const slug = productSlug(data.name);
+                return (
+                  <Col key={key} xs={12} sm={6} lg={4} >
+                    <TeamItem baseUrl="blog" data={data} slug={slug} additionalClassname="" />
+                  </Col>
+                );
+              })} */}
+              </Row>
+            </div>
+          </Container>
+        </div>
+
+
+
+
+
+        {/* <div className="ltn__apartments-plan-area pb-70">
           <Container>
             <Row>
               <Col>
@@ -510,16 +577,16 @@ function HomePage(props) {
               </Col>
             </Row>
           </Container>
-        </div>
+        </div> */}
 
 
         {/* <!-- VIDEO AREA START --> */}
-        <div className="ltn__video-popup-area">
+        {/* <div className="ltn__video-popup-area">
           <VideoBanner />
-        </div>
+        </div> */}
         {/* <!-- VIDEO AREA END --> */}
         {/* <!-- CATEGORY AREA START -->  */}
-        <div className="ltn__category-area ltn__product-gutter pt-115 pb-90">
+        {/* <div className="ltn__category-area ltn__product-gutter pt-115 pb-90">
           <Container>
             <Row>
               <Col xs={12}>
@@ -544,7 +611,7 @@ function HomePage(props) {
               })}
             </Row>
           </Container>
-        </div>
+        </div> */}
         {/* <!-- CATEGORY AREA END --> */}
 
         {/* <!-- TESTIMONIAL AREA START (testimonial-7) -->  */}

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { FaInstagram, FaTwitter, FaFacebookF } from "react-icons/fa";
-const TeamItem = ({ data, baseUrl, slug, additionalClassname }) => {
+const TeamItem = ({ data, baseUrl, slug, additionalClassname , white}) => {
   return (
     <>
       <div className={`ltn__team-item ${additionalClassname}`}>
@@ -8,8 +8,8 @@ const TeamItem = ({ data, baseUrl, slug, additionalClassname }) => {
           <img src={`/img/team/${data.image}`} alt="Image" />
         </div>
         <div className="team-info">
-          <h4>
-            <Link href={`${baseUrl}/${slug}`}>{data.name}</Link>
+          <h4 style={ white ?  { color: "whitesmoke" } : null} >
+            {data.name}
           </h4>
           <h6 className="ltn__secondary-color">{data.designation}</h6>
           <div className="ltn__social-media">
