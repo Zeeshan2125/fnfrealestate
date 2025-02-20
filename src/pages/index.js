@@ -287,7 +287,7 @@ function HomePage(props) {
                     const slug = productSlug(data.name);
                     return (
                       // <Col key={key} xs={12} sm={6} lg={4} >
-                      <TeamItem baseUrl="blog" data={data} slug={slug} additionalClassname="" white={true} />
+                      <TeamItem  key={key} baseUrl="blog" data={data} slug={slug} additionalClassname="" white={true} />
                       // </Col>
                     );
                   })}
