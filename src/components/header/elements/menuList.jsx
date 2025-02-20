@@ -53,10 +53,8 @@ const MenuList = ({ addListing }) => {
         </ul> */}
       </li>
       <li className="menu-icon">
-        <Link href="/about">
-          About <FaPlus />
-        </Link>
-        <ul>
+        <Link href="/about">About</Link>
+        {/* <ul>
           <li>
             <Link href="/about">About</Link>
           </li>
@@ -81,13 +79,11 @@ const MenuList = ({ addListing }) => {
           <li>
             <Link href="/locations">Google Map Locations</Link>
           </li>
-        </ul>
+        </ul> */}
       </li>
       <li className="menu-icon">
-        <Link href="#">
-          Property <FaPlus />
-        </Link>
-        <ul>
+        <Link href="/shop/grid">Property</Link>
+        {/* <ul>
           <li>
             <Link href="/shop">Property</Link>
           </li>
@@ -135,7 +131,7 @@ const MenuList = ({ addListing }) => {
               </li>
             </ul>
           </li>
-        </ul>
+        </ul> */}
       </li>
       <li className="menu-icon">
         <Link href="#">
@@ -156,7 +152,7 @@ const MenuList = ({ addListing }) => {
           </li>
         </ul>
       </li>
-      <li className="menu-icon mega-menu-parent">
+      {/* <li className="menu-icon mega-menu-parent">
         <Link href="#">
           Pages <FaPlus />
         </Link>
@@ -233,7 +229,7 @@ const MenuList = ({ addListing }) => {
             </Link>
           </li>
         </ul>
-      </li>
+      </li> */}
       <li>
         <Link href="/contact">Contact</Link>
       </li>
