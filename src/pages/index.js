@@ -27,13 +27,19 @@ import { useState } from "react";
 import { title } from "process";
 import TeamItem from "@/components/team";
 import TeamData from "@/data/team";
+import IntroAnimation from "@/components/IntroAnimation";
+import CallToActionstyleTwo from "@/components/callToAction/callToActionstyleTwo";
 
 function HomePage(props) {
+  const [showAnimation, setShowAnimation] = useState(true);
+
   const { products } = useSelector((state) => state.product);
+
   const featuredProducts = getProducts(products, "buying", "featured", 6);
   const featureData = getProducts(featuresData, "buying", "featured", 3);
   const agents = getProducts(TeamData, "buying", "featured", 6);
   const { Herodata } = props;
+
   const vision = [
     {
       title: "Vision",
@@ -166,6 +172,10 @@ function HomePage(props) {
   const { cartItems } = useSelector((state) => state.cart);
   const { wishlistItems } = useSelector((state) => state.wishlist);
   const { compareItems } = useSelector((state) => state.compare);
+
+  // if (showAnimation) {
+  //   return <IntroAnimation onComplete={() => setShowAnimation(false)} />;
+  // }
 
   return (
     <>
@@ -682,6 +692,12 @@ function HomePage(props) {
           </Container>
         </div>
         {/* <!-- BLOG AREA END --> */}
+
+        {/* <!-- CONTACT AREA START (blog-3) -->  */}
+        <div className="ltn__blog-area pb-70">
+          <CallToActionstyleTwo />
+        </div>
+        {/* <!-- CONTACT AREA END --> */}
 
         <div className="ltn__call-to-action-area call-to-action-6 before-bg-bottom">
           <Container>

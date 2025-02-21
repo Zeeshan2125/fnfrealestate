@@ -18,7 +18,7 @@ import {
   FaEnvelope,
   FaGlobe,
   FaPencilAlt,
-  FaCalendarAlt
+  FaCalendarAlt,
 } from "react-icons/fa";
 import BreadCrumb from "@/components/breadCrumbs";
 import { LayoutOne } from "@/layouts";
@@ -231,15 +231,15 @@ function ProductDetails({ product }) {
                         ) : (
                           ""
                         ),
-                          product.rent ? (
-                            <li className="ltn__blog-category">
-                              <Link className="bg-orange" href="#">
-                                For Rent
-                              </Link>
-                            </li>
-                          ) : (
-                            ""
-                          ))
+                        product.rent ? (
+                          <li className="ltn__blog-category">
+                            <Link className="bg-orange" href="#">
+                              For Rent
+                            </Link>
+                          </li>
+                        ) : (
+                          ""
+                        ))
                       }
 
                       <li className="ltn__blog-date">
@@ -1264,7 +1264,7 @@ function ProductDetails({ product }) {
                     </ul>
                   </div>
                   {/* <!-- Menu Widget (Category) --> */}
-                  <div className="widget ltn__menu-widget ltn__menu-widget-2--- ltn__menu-widget-2-color-2---">
+                  {/* <div className="widget ltn__menu-widget ltn__menu-widget-2--- ltn__menu-widget-2-color-2---">
                     <h4 className="ltn__widget-title ltn__widget-title-border-2">
                       Top Categories
                     </h4>
@@ -1295,9 +1295,9 @@ function ProductDetails({ product }) {
                         </Link>
                       </li>
                     </ul>
-                  </div>
+                  </div> */}
                   {/* <!-- Popular Product Widget --> */}
-                  <div className="widget ltn__popular-product-widget">
+                  {/* <div className="widget ltn__popular-product-widget">
                     <h4 className="ltn__widget-title ltn__widget-title-border-2">
                       Popular Properties
                     </h4>
@@ -1306,8 +1306,6 @@ function ProductDetails({ product }) {
                       {...popular_product}
                       className="row ltn__popular-product-widget-active slick-arrow-1"
                     >
-                      {/* <!-- ltn__product-item --> */}
-
                       {popularProducts.map((product, key) => {
                         const slug = productSlug(product.title);
                         return (
@@ -1371,7 +1369,7 @@ function ProductDetails({ product }) {
                         );
                       })}
                     </Slider>
-                  </div>
+                  </div> */}
                   {/* <!-- Popular Post Widget --> */}
                   <div className="widget ltn__popular-post-widget">
                     <h4 className="ltn__widget-title ltn__widget-title-border-2">
@@ -1459,7 +1457,6 @@ function ProductDetails({ product }) {
         </div>
         {/* <!-- CALL TO ACTION END --> */}
       </LayoutOne>
-
     </>
   );
 }
