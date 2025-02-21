@@ -18,9 +18,12 @@ const Footer = function () {
     <>
       {/* <!-- FOOTER AREA START --> */}
       <footer className="ltn__footer-area  ">
-        <div className="footer-top-area  section-bg-2 plr--5">
+        <div
+          className="footer-top-area  section-bg-2 plr--5"
+          style={{ backgroundColor: "#01356d" }}
+        >
           <Container fluid>
-            <Row>
+            <Row className="justify-content-center">
               <Col xs={12} sm={6} xl={3}>
                 <div className="footer-widget footer-about-widget">
                   <div className="footer-logo">
@@ -31,8 +34,51 @@ const Footer = function () {
                   </div>
                   <p>
                     Lorem Ipsum is simply dummy text of the and typesetting
-                    industry. Lorem Ipsum is dummy text of the printing.
+                    industry. Lorem Ipsum is dummy text of the printing. Lorem
+                    Ipsum is simply dummy text of the and typesetting industry.
+                    Lorem Ipsum is dummy text of the printing.
                   </p>
+                </div>
+              </Col>
+              <Col xs={12} sm={6} xl={2}>
+                <div className="footer-widget footer-menu-widget clearfix">
+                  <h4 className="footer-title">Company</h4>
+                  <div className="footer-menu">
+                    <ul>
+                      <li>
+                        <Link href="/">Home</Link>
+                      </li>
+                      <li>
+                        <Link href="/about">About</Link>
+                      </li>
+                      <li>
+                        <Link href="/shop/grid">Projects</Link>
+                      </li>
+                      <li>
+                        <Link href="/blog/grid">News</Link>
+                      </li>
+                      <li>
+                        <Link href="/contact">Contact us</Link>
+                      </li>
+                      {/* <li>
+                        <Link href="/shop">All Products</Link>
+                      </li>
+                      <li>
+                        <Link href="/locations">Locations Map</Link>
+                      </li>
+                      <li>
+                        <Link href="/faq">FAQ</Link>
+                      </li>
+                      <li>
+                        <Link href="/contact">Contact us</Link>
+                      </li> */}
+                    </ul>
+                  </div>
+                </div>
+              </Col>
+              <Col xs={12} sm={6} xl={3}>
+                <div className="footer-widget footer-menu-widget clearfix">
+                  <h4 className="footer-title">Get In Touch</h4>
                   <div className="footer-address">
                     <ul>
                       <li>
@@ -48,9 +94,7 @@ const Footer = function () {
                           <FaPhoneAlt />
                         </div>
                         <div className="footer-address-info">
-                          <p>
-                            <Link href="tel:+0123-456789">+0123-456789</Link>
-                          </p>
+                          <p>+0123-456789</p>
                         </div>
                       </li>
                       <li>
@@ -58,11 +102,7 @@ const Footer = function () {
                           <FaEnvelope />
                         </div>
                         <div className="footer-address-info">
-                          <p>
-                            <Link href="mailto:example@example.com">
-                              example@example.com
-                            </Link>
-                          </p>
+                          <p>example@example.com</p>
                         </div>
                       </li>
                     </ul>
@@ -93,90 +133,6 @@ const Footer = function () {
                   </div>
                 </div>
               </Col>
-              <Col xs={12} sm={6} xl={2}>
-                <div className="footer-widget footer-menu-widget clearfix">
-                  <h4 className="footer-title">Company</h4>
-                  <div className="footer-menu">
-                    <ul>
-                      <li>
-                        <Link href="/">Home</Link>
-                      </li>
-                      <li>
-                        <Link href="/about">About</Link>
-                      </li>
-                      <li>
-                        <Link href="/blog/grid">News</Link>
-                      </li>
-                      {/* <li>
-                        <Link href="/shop">All Products</Link>
-                      </li>
-                      <li>
-                        <Link href="/locations">Locations Map</Link>
-                      </li>
-                      <li>
-                        <Link href="/faq">FAQ</Link>
-                      </li>
-                      <li>
-                        <Link href="/contact">Contact us</Link>
-                      </li> */}
-                    </ul>
-                  </div>
-                </div>
-              </Col>
-              <Col xs={12} sm={6} xl={2}>
-                <div className="footer-widget footer-menu-widget clearfix">
-                  <h4 className="footer-title">Services</h4>
-                  <div className="footer-menu">
-                    <ul>
-                      <li>
-                        <Link href="/shop/grid">Projects</Link>
-                      </li>
-                      {/* <li>
-                        <Link href="/wishlist">Wish List</Link>
-                      </li>
-                      <li>
-                        <Link href="/login">Login</Link>
-                      </li>
-                      <li>
-                        <Link href="/my-account">My account</Link>
-                      </li>
-                      <li>
-                        <Link href="/about">Terms & Conditions</Link>
-                      </li>
-                      <li>
-                        <Link href="/about">Promotional Offers</Link>
-                      </li> */}
-                    </ul>
-                  </div>
-                </div>
-              </Col>
-              <Col xs={12} sm={6} xl={2}>
-                <div className="footer-widget footer-menu-widget clearfix">
-                  <h4 className="footer-title">Customer Care</h4>
-                  <div className="footer-menu">
-                    <ul>
-                      {/* <li>
-                        <Link href="/login">Login</Link>
-                      </li>
-                      <li>
-                        <Link href="/my-account">My account</Link>
-                      </li>
-                      <li>
-                        <Link href="/wishlist">Wish List</Link>
-                      </li>
-                      <li>
-                        <Link href="/order-tracking">Order tracking</Link>
-                      </li>
-                      <li>
-                        <Link href="/faq">FAQ</Link>
-                      </li> */}
-                      <li>
-                        <Link href="/contact">Contact us</Link>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </Col>
               <Col xs={12} sm={6} xl={3}>
                 <div className="footer-widget footer-newsletter-widget">
                   <h4 className="footer-title">We Accept</h4>
@@ -195,14 +151,24 @@ const Footer = function () {
                       </div>
                     </form>
                   </div> */}
-                  {/* <h5 className="mt-30">We Accept</h5> */}
                   <img src="/img/icons/payment-4.png" alt="Payment Image" />
+                  <h5 className="mt-30">Location</h5>
+                  <div>
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9334.271551495209!2d-73.97198251485975!3d40.668170674982946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25b0456b5a2e7%3A0x68bdf865dda0b669!2sBrooklyn%20Botanic%20Garden%20Shop!5e0!3m2!1sen!2sbd!4v1590597267201!5m2!1sen!2sbd"
+                      width="100%"
+                      height="20%"
+                    ></iframe>
+                  </div>
                 </div>
               </Col>
             </Row>
           </Container>
         </div>
-        <div className="ltn__copyright-area ltn__copyright-2 section-bg-7  plr--5">
+        <div
+          className="ltn__copyright-area ltn__copyright-2 section-bg-7  plr--5"
+          style={{ backgroundColor: "#034e9e" }}
+        >
           <div className="container-fluid ltn__border-top-2">
             <Row>
               <Col xs={12} md={6}>

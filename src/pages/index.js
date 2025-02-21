@@ -39,11 +39,13 @@ function HomePage(props) {
       title: "Vision",
       shortDescription:
         "This is our vison This is our vison This is our vison This is our vison This is our vison This is our vison This is our vison",
+      icon: "/img/vision.png",
     },
     {
       title: "Mission",
       shortDescription:
         "This is our Mission This is our Mission This is our Mission This is our Mission This is our Mission This is our Mission",
+      icon: "/img/mission.png",
     },
   ];
 
@@ -178,7 +180,7 @@ function HomePage(props) {
         <Feature
           classes="section-bg-1"
           servicebtn={true}
-          iconTag={false}
+          imageTag={true}
           data={vision}
           white={true}
           headingClasses="section-subtitle-2"

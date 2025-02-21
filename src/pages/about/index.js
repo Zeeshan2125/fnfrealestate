@@ -12,9 +12,9 @@ import blogData from "@/data/blog";
 import CallToAction from "@/components/callToAction";
 import AboutUsStyleOne from "@/components/aboutUs/aboutUsStyleOne";
 import Feature from "@/components/features";
-import featureData from "@/data/service"
+import featureData from "@/data/service";
 import TeamItem from "@/components/team";
-import TeamData from '@/data/team';
+import TeamData from "@/data/team";
 
 function AboutUs() {
   const agents = getProducts(TeamData, "buying", "featured", 3);
@@ -22,19 +22,22 @@ function AboutUs() {
   const vision = [
     {
       title: "Vision",
-      shortDescription: "This is our vison This is our vison This is our vison This is our vison This is our vison This is our vison This is our vison"
+      shortDescription:
+        "This is our vison This is our vison This is our vison This is our vison This is our vison This is our vison This is our vison",
+      icon: "/img/vision.png",
     },
     {
       title: "Mission",
-      shortDescription: "This is our Mission This is our Mission This is our Mission This is our Mission This is our Mission This is our Mission"
-    }
-  ]
+      shortDescription:
+        "This is our Mission This is our Mission This is our Mission This is our Mission This is our Mission This is our Mission",
+      icon: "/img/mission.png",
+    },
+  ];
   const SlickArrowLeft = ({ currentSlide, slideCount, ...props }) => (
     <button
       {...props}
       className={
-        "slick-prev slick-arrow" +
-        (currentSlide === 0 ? " slick-disabled" : "")
+        "slick-prev slick-arrow" + (currentSlide === 0 ? " slick-disabled" : "")
       }
       aria-hidden="true"
       aria-disabled={currentSlide === 0 ? true : false}
@@ -109,7 +112,7 @@ function AboutUs() {
         <Feature
           classes="section-bg-1"
           servicebtn={true}
-          iconTag={false}
+          imageTag={true}
           data={vision}
           white={true}
           titleSectionData={{
@@ -118,13 +121,6 @@ function AboutUs() {
             title: "Our Vision & Mission",
           }}
         />
-
-
-
-
-    
-
-
 
         {/* <!-- TESTIMONIAL AREA START (testimonial-7) -->  */}
         <div
@@ -157,9 +153,8 @@ function AboutUs() {
         </div>
         {/* <!-- TESTIMONIAL AREA END --> */}
 
-
-        <div style={{ backgroundColor: "#01356d", }}>
-          <Container >
+        <div style={{ backgroundColor: "#01356d" }}>
+          <Container>
             <div className="ltn__team-area pt-115 pb-90">
               <Row>
                 <Col lg={12}>
@@ -179,12 +174,18 @@ function AboutUs() {
                   {...testiMonialsettings}
                   className="ltn__testimonial-slider-5-active slick-arrow-1"
                 >
-
                   {agents.map((data, key) => {
                     const slug = productSlug(data.name);
                     return (
                       // <Col key={key} xs={12} sm={6} lg={4} >
-                      <TeamItem key={key} baseUrl="blog" data={data} slug={slug} additionalClassname="" white={true} />
+                      <TeamItem
+                        key={key}
+                        baseUrl="blog"
+                        data={data}
+                        slug={slug}
+                        additionalClassname=""
+                        white={true}
+                      />
                       // </Col>
                     );
                   })}
