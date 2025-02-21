@@ -108,7 +108,7 @@ const Footer = function () {
                     </ul>
                   </div>
                   <h5 className="mt-30">Follow On</h5>
-                  <div className="ltn__social-media mt-20">
+                  <div className="ltn__social-media">
                     <ul>
                       <li>
                         <Link href="#" title="Facebook">
