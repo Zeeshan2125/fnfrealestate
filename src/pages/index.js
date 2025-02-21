@@ -26,24 +26,26 @@ import featuresData from "@/data/service";
 import { useState } from "react";
 import { title } from "process";
 import TeamItem from "@/components/team";
-import TeamData from '@/data/team';
+import TeamData from "@/data/team";
 
 function HomePage(props) {
   const { products } = useSelector((state) => state.product);
-  const featuredProducts = getProducts(products, "buying", "featured", 5);
+  const featuredProducts = getProducts(products, "buying", "featured", 6);
   const featureData = getProducts(featuresData, "buying", "featured", 3);
   const agents = getProducts(TeamData, "buying", "featured", 6);
   const { Herodata } = props;
   const vision = [
     {
       title: "Vision",
-      shortDescription: "This is our vison This is our vison This is our vison This is our vison This is our vison This is our vison This is our vison"
+      shortDescription:
+        "This is our vison This is our vison This is our vison This is our vison This is our vison This is our vison This is our vison",
     },
     {
       title: "Mission",
-      shortDescription: "This is our Mission This is our Mission This is our Mission This is our Mission This is our Mission This is our Mission"
-    }
-  ]
+      shortDescription:
+        "This is our Mission This is our Mission This is our Mission This is our Mission This is our Mission This is our Mission",
+    },
+  ];
 
   const SlickArrowLeft = ({ currentSlide, slideCount, ...props }) => (
     <button
@@ -159,7 +161,6 @@ function HomePage(props) {
     ],
   };
 
-
   const { cartItems } = useSelector((state) => state.cart);
   const { wishlistItems } = useSelector((state) => state.wishlist);
   const { compareItems } = useSelector((state) => state.compare);
@@ -218,10 +219,7 @@ function HomePage(props) {
             <Row>
               <Col lg={12}>
                 {!!featuredProducts?.length ? (
-                  <Slider
-                    {...productCarouselsettings}
-                    className="ltn__product-slider-item-four-active-full-width slick-arrow-1"
-                  >
+                  <Row>
                     {featuredProducts.map((product, key) => {
                       const slug = productSlug(product.title);
 
@@ -241,28 +239,35 @@ function HomePage(props) {
                       );
 
                       return (
-                        <ProductItem
+                        <Col
                           key={product.id}
-                          productData={product}
-                          slug={slug}
-                          baseUrl="shop"
-                          discountedPrice={discountedPrice}
-                          productPrice={productPrice}
-                          cartItem={cartItem}
-                          wishlistItem={wishlistItem}
-                          compareItem={compareItem}
-                        />
+                          lg={4}
+                          md={6}
+                          sm={12}
+                          className="mb-4"
+                        >
+                          <ProductItem
+                            productData={product}
+                            slug={slug}
+                            baseUrl="shop"
+                            discountedPrice={discountedPrice}
+                            productPrice={productPrice}
+                            cartItem={cartItem}
+                            wishlistItem={wishlistItem}
+                            compareItem={compareItem}
+                          />
+                        </Col>
                       );
                     })}
-                  </Slider>
+                  </Row>
                 ) : null}
               </Col>
             </Row>
           </Container>
         </div>
         {/* PRODUCT SLIDER AREA END */}
-        <div style={{ backgroundColor: "#01356d", }}>
-          <Container >
+        <div style={{ backgroundColor: "#01356d" }}>
+          <Container>
             <div className="ltn__team-area pt-115 pb-90">
               <Row>
                 <Col lg={12}>
@@ -282,12 +287,18 @@ function HomePage(props) {
                   {...testiMonialsettings}
                   className="ltn__testimonial-slider-5-active slick-arrow-1"
                 >
-
                   {agents.map((data, key) => {
                     const slug = productSlug(data.name);
                     return (
                       // <Col key={key} xs={12} sm={6} lg={4} >
-                      <TeamItem  key={key} baseUrl="blog" data={data} slug={slug} additionalClassname="" white={true} />
+                      <TeamItem
+                        key={key}
+                        baseUrl="blog"
+                        data={data}
+                        slug={slug}
+                        additionalClassname=""
+                        white={true}
+                      />
                       // </Col>
                     );
                   })}
@@ -307,10 +318,6 @@ function HomePage(props) {
             </div>
           </Container>
         </div>
-
-
-
-
 
         {/* <div className="ltn__apartments-plan-area pb-70">
           <Container>
@@ -578,7 +585,6 @@ function HomePage(props) {
             </Row>
           </Container>
         </div> */}
-
 
         {/* <!-- VIDEO AREA START --> */}
         {/* <div className="ltn__video-popup-area">
