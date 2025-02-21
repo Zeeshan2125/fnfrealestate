@@ -6,14 +6,14 @@ const BreadCrumb = ({ title, currentSlug, sectionPace }) => {
   return (
     <>
       <div
-        className={`ltn__breadcrumb-area text-left bg-overlay-white-30 bg-image ${sectionPace}`}
-        style={{ backgroundImage: `url("../img/bg/14.jpg")` }}
+        className={`ltn__breadcrumb-area text-left ${sectionPace}`}
+        style={{ backgroundColor: "#01356d", }}
       >
         <Container>
           <Row>
             <Col xs={12}>
               <div className="ltn__breadcrumb-inner">
-                <h1 className="page-title">{title}</h1>
+                <h1 className="page-title" style={ { color: "whitesmoke" } }>{title}</h1>
                 <div className="ltn__breadcrumb-list">
                   <ul>
                     <li>
@@ -21,17 +21,17 @@ const BreadCrumb = ({ title, currentSlug, sectionPace }) => {
                         <span className="ltn__secondary-color">
                           <FaHome className="me-2" />
                         </span>
-                        <span className="me-2">Home</span>
+                        <span className="me-2" style={ { color: "whitesmoke" } }>Home</span>
                         <FaAngleRight />
                       </Link>
                     </li>
                     <li>
                       <Link href="/shop">
-                        <span className="me-2">Shop</span>
+                        <span style={ { color: "whitesmoke" } } className="me-2">Shop</span>
                         <FaAngleRight />
                       </Link>
                     </li>
-                    <li>{currentSlug}</li>
+                    <li style={ { color: "whitesmoke" } } > {currentSlug}</li>
                   </ul>
                 </div>
               </div>
