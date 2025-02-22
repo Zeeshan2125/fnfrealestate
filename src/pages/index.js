@@ -23,7 +23,7 @@ import testimonialData from "@/data/testimonial";
 import BlogItem from "@/components/blog";
 import blogData from "@/data/blog";
 import featuresData from "@/data/service";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { title } from "process";
 import TeamItem from "@/components/team";
 import TeamData from "@/data/team";
@@ -31,8 +31,7 @@ import IntroAnimation from "@/components/IntroAnimation";
 import CallToActionstyleTwo from "@/components/callToAction/callToActionstyleTwo";
 
 function HomePage(props) {
-  const [showAnimation, setShowAnimation] = useState(true);
-
+  const [showAnimation, setShowAnimation] = useState(false);
   const { products } = useSelector((state) => state.product);
 
   const featuredProducts = getProducts(products, "buying", "featured", 6);
@@ -173,9 +172,21 @@ function HomePage(props) {
   const { wishlistItems } = useSelector((state) => state.wishlist);
   const { compareItems } = useSelector((state) => state.compare);
 
-  // if (showAnimation) {
-  //   return <IntroAnimation onComplete={() => setShowAnimation(false)} />;
-  // }
+  useEffect(() => {
+    const hasSeenAnimation = sessionStorage.getItem("seenIntroAnimation");
+    if (!hasSeenAnimation) {
+      setShowAnimation(true);
+    }
+  }, []);
+
+  const handleAnimationComplete = () => {
+    sessionStorage.setItem("seenIntroAnimation", "true");
+    setShowAnimation(false);
+  };
+
+  if (showAnimation) {
+    return <IntroAnimation onComplete={handleAnimationComplete} />;
+  }
 
   return (
     <>

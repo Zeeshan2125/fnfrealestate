@@ -7,8 +7,8 @@ export default function IntroAnimation({ onComplete }) {
   const [showLogo, setShowLogo] = useState(false);
 
   useEffect(() => {
-    const logoTimer = setTimeout(() => setShowLogo(true), 5500); // Show logo
-    const redirectTimer = setTimeout(() => onComplete(), 7500); // Hide animation after 7.5s
+    const logoTimer = setTimeout(() => setShowLogo(true), 3000); // Show logo
+    const redirectTimer = setTimeout(() => onComplete(), 4500); // Hide animation after 7.5s
 
     return () => {
       clearTimeout(logoTimer);
@@ -24,14 +24,14 @@ export default function IntroAnimation({ onComplete }) {
       {!showLogo ? (
         <motion.div
           initial={{ opacity: 1, scale: 1 }}
-          animate={{ opacity: 0, scale: 0.5 }}
-          transition={{ duration: 1.8, delay: 4 }}
+          animate={{ opacity: 0, scale: 0.7 }}
+          transition={{ duration: 1, delay: 2 }}
           className="text-center"
         >
           <motion.h1
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
+            transition={{ duration: 0.8 }}
             className="fw-bold display-4 text-white"
           >
             Fact and Figure
@@ -39,7 +39,7 @@ export default function IntroAnimation({ onComplete }) {
           <motion.h2
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 2.2, delay: 2 }}
+            transition={{ duration: 1.2, delay: 1 }}
             className="fs-4 mt-3 text-white"
           >
             Business with no complaints
@@ -51,9 +51,9 @@ export default function IntroAnimation({ onComplete }) {
           alt="Logo"
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1.5 }}
+          transition={{ duration: 1 }}
           className="img-fluid"
-          style={{ maxWidth: "250px" }} // Adjust size using Bootstrap utilities
+          style={{ width: "300px" }}
         />
       )}
     </div>
