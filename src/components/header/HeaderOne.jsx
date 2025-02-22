@@ -90,6 +90,11 @@ const HeaderStyleOne = function ({ SetToggleClassName, topbar }) {
         {/* <!-- ltn__header-top-area end --> */}
 
         {/* <!-- ltn__header-middle-area start --> */}
+        <div className="site-logo-mbl">
+          <Link href="/">
+            <img src="/img/logo.png" alt="Logo" />
+          </Link>
+        </div>
         <div
           className={clsx(
             "ltn__header-middle-area ltn__header-sticky ltn__sticky-bg-white",
@@ -98,11 +103,6 @@ const HeaderStyleOne = function ({ SetToggleClassName, topbar }) {
           style={{ backgroundColor: "#BFBFBF" }}
         >
           <Container>
-            <div className="site-logo-mbl">
-              <Link href="/">
-                <img src="/img/logo.png" alt="Logo" />
-              </Link>
-            </div>
             <div className="d-flex justify-content-between align-items-center">
               {/* <div> */}
               {/* <div className="site-logo-wrap"> */}

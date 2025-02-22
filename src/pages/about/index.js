@@ -178,7 +178,6 @@ function AboutUs() {
                   {agents.map((data, key) => {
                     const slug = productSlug(data.name);
                     return (
-                      // <Col key={key} xs={12} sm={6} lg={4} >
                       <TeamItem
                         key={key}
                         baseUrl="blog"
@@ -187,21 +186,9 @@ function AboutUs() {
                         additionalClassname=""
                         white={false}
                       />
-                      // </Col>
                     );
                   })}
-                  {/* {testimonialData.map((data, key) => {
-                  return <TestimonialCarouselItem key={key} data={data} />;
-                })} */}
                 </Slider>
-                {/* {agents.map((data, key) => {
-                const slug = productSlug(data.name);
-                return (
-                  <Col key={key} xs={12} sm={6} lg={4} >
-                    <TeamItem baseUrl="blog" data={data} slug={slug} additionalClassname="" />
-                  </Col>
-                );
-              })} */}
               </Row>
             </div>
           </Container>

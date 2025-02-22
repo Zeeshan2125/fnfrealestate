@@ -46,10 +46,10 @@ const Footer = function () {
                       Facts and Figures
                     </h2>
                     <h5
-                      className="slide-sub-title mb-0 footer-fnf-h5"
-                      style={{ color: "#ffffff" }}
+                      className="slide-sub-title mb-0 footer-fnf-p"
+                      style={{ color: "#ffffff", fontWeight: "400" }}
                     >
-                      Real Estate
+                      Business with no complaints
                     </h5>
                   </div>
                 </div>

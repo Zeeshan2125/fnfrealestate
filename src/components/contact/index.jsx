@@ -93,7 +93,7 @@ const Contact = () => {
                         </span>
                       </div>
                     </div>
-                    <div className="col-md-6">
+                    {/* <div className="col-md-6">
                       <div className="input-item input-item input-item-email ltn__custom-icon">
                         <Form.Select className="nice-select">
                           <option>Select Service Type</option>
@@ -108,8 +108,8 @@ const Contact = () => {
                           <FaArrowDown />
                         </span>
                       </div>
-                    </div>
-                    <div className="col-md-6">
+                    </div> */}
+                    <div className="col-md-12">
                       <div className="input-item input-item-phone ltn__custom-icon">
                         <input
                           type="text"
@@ -132,13 +132,13 @@ const Contact = () => {
                       <FaPencilAlt />
                     </span>
                   </div>
-                  <p>
+                  {/* <p>
                     <label className="input-info-save mb-0 text-white">
                       <input type="checkbox" name="agree" /> Save my name,
                       email, and website in this browser for the next time I
                       comment.
                     </label>
-                  </p>
+                  </p> */}
                   <div className="btn-wrapper mt-0">
                     <button
                       className="btn theme-btn-1 btn-effect-1 text-uppercase"
