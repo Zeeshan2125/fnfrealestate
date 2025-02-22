@@ -258,15 +258,19 @@ function ProductDetails({ product }) {
                     </ul>
                   </div> */}
                   <h1> {product.title}</h1>
-                  <label>
+                  <label style={{ color: "#111111" }}>
                     <span className="ltn__secondary-color">
                       <i className="flaticon-pin"></i>
                     </span>{" "}
                     {product.locantion}
                   </label>
                   <h4 className="title-2"> {product.description.title}</h4>
-                  <p>{product.description.fullDescription}</p>
-                  <p>{product.description.shortDescription}</p>
+                  <p style={{ color: "#111111" }}>
+                    {product.description.fullDescription}
+                  </p>
+                  <p style={{ color: "#111111" }}>
+                    {product.description.shortDescription}
+                  </p>
                   <button
                     onClick={() => setModalShow(true)}
                     className="btn theme-btn-1"
@@ -444,7 +448,7 @@ function ProductDetails({ product }) {
                     <div className="row">
                       <div className="col-lg-4 col-md-6">
                         <div className="ltn__menu-widget">
-                          <ul>
+                          <ul style={{ color: "#111111" }}>
                             {product.amenities1.map((single, key) => {
                               return (
                                 <li key={key}>
@@ -464,7 +468,7 @@ function ProductDetails({ product }) {
                       </div>
                       <div className="col-lg-4 col-md-6">
                         <div className="ltn__menu-widget">
-                          <ul>
+                          <ul style={{ color: "#111111" }}>
                             {product.amenities2.map((single, key) => {
                               return (
                                 <li key={key}>
@@ -484,7 +488,7 @@ function ProductDetails({ product }) {
                       </div>
                       <div className="col-lg-4 col-md-6">
                         <div className="ltn__menu-widget">
-                          <ul>
+                          <ul style={{ color: "#111111" }}>
                             {product.amenities3.map((single, key) => {
                               return (
                                 <li key={key}>
