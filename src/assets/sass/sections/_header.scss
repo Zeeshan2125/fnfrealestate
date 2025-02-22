@@ -1902,6 +1902,9 @@
 }
 
 @media (max-width: 575px) {
+  .home-slider-pic {
+    height: 500px !important;
+  }
   .footer-fnf-h2 {
     font-size: 28px !important;
   }
@@ -1978,6 +1981,9 @@
 }
 
 @media (max-width: 449px) {
+  .home-slider-pic {
+    height: 500px !important;
+  }
   .footer-fnf-h2 {
     font-size: 28px !important;
   }
@@ -2040,6 +2046,9 @@
   }
 }
 @media (max-width: 370px) {
+  .home-slider-pic {
+    height: 500px !important;
+  }
   .footer-fnf-h2 {
     font-size: 28px !important;
   }
@@ -2425,4 +2434,8 @@
 
 .facts-box {
   text-align: center;
+}
+
+.home-slider-pic {
+  height: 100%;
 }

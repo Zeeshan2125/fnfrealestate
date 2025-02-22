@@ -77,9 +77,9 @@ function HeroSectionStyleOne({ data }) {
                   alt=""
                   style={{
                     width: "100%",
-                    height: "100%",
                     objectFit: "cover",
                   }}
+                  className="home-slider-pic"
                 />
 
                 {/* Overlay */}
