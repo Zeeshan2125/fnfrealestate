@@ -85,7 +85,7 @@ const HeaderStyleOne = function ({ SetToggleClassName, topbar }) {
     <>
       <header className="ltn__header-area ltn__header-5">
         {/* <!-- ltn__header-top-area start --> */}
-        {topbar ? <HeaderTopBarOne /> : null}
+        {/* {topbar ? <HeaderTopBarOne /> : null} */}
 
         {/* <!-- ltn__header-top-area end --> */}
 
@@ -97,17 +97,34 @@ const HeaderStyleOne = function ({ SetToggleClassName, topbar }) {
           )}
         >
           <Container>
-            <Row>
+            <Row className="justify-content-between">
               <Col>
                 <div className="site-logo-wrap">
-                  <div className="site-logo">
-                    <Link href="/">
-                      <img src="/img/logo.png" alt="Logo" />
-                    </Link>
+                  <div className="d-flex align-items-center gap-3">
+                    {/* <div className="site-logo">
+                      <Link href="/">
+                        <img src="/img/logo.png" alt="Logo" />
+                      </Link>
+                    </div> */}
+                    <div className="">
+                      <h1
+                        className="slide-sub-title mb-0 "
+                        style={{ color: "#01356d" }}
+                      >
+                        Facts <span style={{ color: "#9b2727" }}>and</span>{" "}
+                        Figures
+                      </h1>
+                      {/* <p
+                        className="slide-sub-title mb-0"
+                        style={{ color: "#01356d" }}
+                      >
+                        Business with no complaints
+                      </p> */}
+                    </div>
                   </div>
                 </div>
               </Col>
-              <Col className="header-menu-column">
+              {/* <Col className="header-menu-column">
                 <div className="header-menu d-none d-xl-block">
                   <nav>
                     <div className="ltn__main-menu">
@@ -115,8 +132,12 @@ const HeaderStyleOne = function ({ SetToggleClassName, topbar }) {
                     </div>
                   </nav>
                 </div>
-              </Col>
-              <Col className="ltn__header-options ltn__header-options-2">
+              </Col> */}
+              <Col
+                xs={4}
+                lg={""}
+                className="ltn__header-options ltn__header-options-2"
+              >
                 {/* <div className="header-search-wrap">
                   <div
                     className={`header-search-1 ${
@@ -212,7 +233,7 @@ const HeaderStyleOne = function ({ SetToggleClassName, topbar }) {
                 </div> */}
                 {/* <!-- mini-cart --> */}
                 {/* <!-- Mobile Menu Button --> */}
-                <div className="mobile-menu-toggle d-xl-none">
+                <div className="mobile-menu-toggle">
                   <button
                     onClick={offcanVasToggler}
                     className={`ltn__utilize-toggle ${

@@ -2575,3 +2575,11 @@ ul {
   z-index: 10;
   position: relative;
 }
+
+.header-hero-bg {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url(/img/fnf-home.jpg);
+  height: 600px;
+}

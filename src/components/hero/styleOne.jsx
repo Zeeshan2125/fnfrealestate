@@ -44,6 +44,7 @@ function HeroSectionStyleOne({ data }) {
     slidesToScroll: 1,
     prevArrow: <SlickArrowLeft />,
     nextArrow: <SlickArrowRight />,
+    autoplay: true,
   };
 
   const [isOpen, setOpen] = useState(false);
@@ -57,7 +58,7 @@ function HeroSectionStyleOne({ data }) {
         onClose={() => setOpen(false)}
       />
 
-      <div className="ltn__slider-area ltn__slider-3  section-bg-1" style={ { backgroundColor: "#01356d", color: "whitesmoke" } } >
+      <div className="ltn__slider-area ltn__slider-3  section-bg-1">
         <Slider
           {...Herosettings}
           className="ltn__slide-one-active slick-slide-arrow-1 slick-slide-dots-1"
@@ -65,53 +66,33 @@ function HeroSectionStyleOne({ data }) {
           {data.map((item, key) => {
             return (
               <div
-                className="ltn__slide-item ltn__slide-item-2 ltn__slide-item-3-normal ltn__slide-item-3 position-relative"
+                className="position-relative"
                 key={key}
+                style={{ width: "100%", height: "100vh", overflow: "hidden" }}
               >
+                {/* Image */}
+                <img
+                  src={item.image}
+                  alt=""
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                  }}
+                />
+
+                {/* Overlay */}
                 <div
-                  className={`ltn__slide-item-inner ${
-                    item.variationLeft ? "text-right text-end" : ""
-                  }`}
-                >
-                  <div className="container">
-                    <div className="row">
-                      <div className="col-lg-12 align-self-center">
-                        <div className="slide-item-info">
-                          <div className="slide-item-info-inner ltn__slide-animation">
-                            <h6 className="slide-sub-title animated" style={ {  color: "whitesmoke" } }>
-                              <span>
-                                <FaHome />
-                              </span>
-                              {item.subtitle}
-                            </h6>
-                            <h1 className="slide-title animated" style={ {  color: "whitesmoke" } }>
-                              {item.Title}
-                            </h1>
-                            <div className="slide-brief animated" >
-                              <p style={ {  color: "whitesmoke" } } > {item.Desc}</p>
-                            </div>
-                            <div className="btn-wrapper animated">
-                              <Link
-                                href="/about"
-                                className="theme-btn-1 btn btn-effect-1"
-                              >
-                                {item.buttonText}
-                              </Link>
+                  className="position-absolute top-0 start-0 w-100 h-100"
+                  style={{
+                    background: "rgba(0, 0, 0, 0.4)", // Adjust opacity for darker/lighter overlay
+                  }}
+                ></div>
 
-
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          className={`slide-item-img ${
-                            item.variationLeft ? "slide-img-left" : ""
-                          }`}
-                        >
-                          <img src="img/slider/21.png" alt="#" />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                {/* Optional Content */}
+                <div className="position-absolute top-50 start-50 translate-middle text-white text-center">
+                  <h2>{item.title}</h2>
+                  <p>{item.description}</p>
                 </div>
               </div>
             );

@@ -54,6 +54,18 @@ function HomePage(props) {
     },
   ];
 
+  const sliderData = [
+    {
+      image: "/img/fnf-home.jpg",
+    },
+    {
+      image: "/img/fnf-home2.jpeg",
+    },
+    {
+      image: "/img/fnf-home3.jpeg",
+    },
+  ];
+
   const SlickArrowLeft = ({ currentSlide, slideCount, ...props }) => (
     <button
       {...props}
@@ -191,13 +203,65 @@ function HomePage(props) {
   return (
     <>
       <LayoutOne topbar={true}>
-        <HeroSectionStyleOne data={Herodata} />
+        <HeroSectionStyleOne data={sliderData} />
 
         {/* <CarDealerSearchForm navMenuClass="d-none" customClasses="" /> */}
         {/* <!-- CAR DEALER FORM AREA END -->
 
       <!-- ABOUT US AREA START --> */}
-        <AboutUsStyleOne sectionSpace="pt-120 pb-90" />
+        {/* <AboutUsStyleOne sectionSpace="pt-120 pb-90" /> */}
+        <div style={{ backgroundColor: "#BFBFBF" }}>
+          <Container>
+            <div className="ltn__team-area pt-115">
+              <Row>
+                <Col lg={12}>
+                  <TitleSection
+                    sectionClasses="text-center"
+                    headingClasses="section-subtitle-2 text-black"
+                    titleSectionData={{
+                      subTitle: "Our Team",
+                      title: "Meet Our Wonderful Team",
+                    }}
+                    white={false}
+                  />
+                </Col>
+              </Row>
+              <Row>
+                <Slider
+                  {...testiMonialsettings}
+                  className="ltn__testimonial-slider-5-active slick-arrow-1"
+                >
+                  {agents.map((data, key) => {
+                    const slug = productSlug(data.name);
+                    return (
+                      // <Col key={key} xs={12} sm={6} lg={4} >
+                      <TeamItem
+                        key={key}
+                        baseUrl="blog"
+                        data={data}
+                        slug={slug}
+                        additionalClassname=""
+                        white={false}
+                      />
+                      // </Col>
+                    );
+                  })}
+                  {/* {testimonialData.map((data, key) => {
+                  return <TestimonialCarouselItem key={key} data={data} />;
+                })} */}
+                </Slider>
+                {/* {agents.map((data, key) => {
+                const slug = productSlug(data.name);
+                return (
+                  <Col key={key} xs={12} sm={6} lg={4} >
+                    <TeamItem baseUrl="blog" data={data} slug={slug} additionalClassname="" />
+                  </Col>
+                );
+              })} */}
+              </Row>
+            </div>
+          </Container>
+        </div>
         <Feature
           classes="section-bg-1"
           servicebtn={true}
@@ -289,58 +353,6 @@ function HomePage(props) {
           </Container>
         </div>
         {/* PRODUCT SLIDER AREA END */}
-        <div style={{ backgroundColor: "#01356d" }}>
-          <Container>
-            <div className="ltn__team-area pt-115 pb-90">
-              <Row>
-                <Col lg={12}>
-                  <TitleSection
-                    sectionClasses="text-center"
-                    headingClasses="section-subtitle-2"
-                    titleSectionData={{
-                      subTitle: "Our Team",
-                      title: "Meet Our Wonderful Team",
-                    }}
-                    white={true}
-                  />
-                </Col>
-              </Row>
-              <Row>
-                <Slider
-                  {...testiMonialsettings}
-                  className="ltn__testimonial-slider-5-active slick-arrow-1"
-                >
-                  {agents.map((data, key) => {
-                    const slug = productSlug(data.name);
-                    return (
-                      // <Col key={key} xs={12} sm={6} lg={4} >
-                      <TeamItem
-                        key={key}
-                        baseUrl="blog"
-                        data={data}
-                        slug={slug}
-                        additionalClassname=""
-                        white={true}
-                      />
-                      // </Col>
-                    );
-                  })}
-                  {/* {testimonialData.map((data, key) => {
-                  return <TestimonialCarouselItem key={key} data={data} />;
-                })} */}
-                </Slider>
-                {/* {agents.map((data, key) => {
-                const slug = productSlug(data.name);
-                return (
-                  <Col key={key} xs={12} sm={6} lg={4} >
-                    <TeamItem baseUrl="blog" data={data} slug={slug} additionalClassname="" />
-                  </Col>
-                );
-              })} */}
-              </Row>
-            </div>
-          </Container>
-        </div>
 
         {/* <div className="ltn__apartments-plan-area pb-70">
           <Container>
