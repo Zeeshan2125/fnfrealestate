@@ -37,10 +37,26 @@ const MyApp = ({ Component, ...rest }) => {
   return (
     <Fragment>
       <Head>
-        <title>FNF - Real Estate</title>
-        <meta name="description" content="FNF - Real Estate" />
+        <title>Facts and Figures</title>
+        <meta name="description" content="Business with no complaints" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
+
+        {/* Open Graph Metadata */}
+        <meta property="og:title" content="Facts and Figures" />
+        <meta property="og:description" content="Business with no complaints" />
+        <meta property="og:image" content="/img/logo.png" />
+        <meta property="og:type" content="website" />
+        {/* <meta property="og:url" content="https://yourwebsite.com" /> */}
+
+        {/* Twitter Card Metadata */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Facts and Figures" />
+        <meta
+          name="twitter:description"
+          content="Business with no complaints"
+        />
+        <meta name="twitter:image" content="/img/logo.png" />
       </Head>
       <style jsx global>{`
         html,
