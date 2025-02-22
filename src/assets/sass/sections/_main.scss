@@ -2971,7 +2971,7 @@ blockquote {
 
 /* testimonial-item-7 */
 .ltn__testimonial-item-7 {
-  background-color: var(--white);
+  background-color: #01356d;
   padding: 30px 35px 40px;
   max-width: 100%;
   border-radius: 10px;
@@ -2979,6 +2979,7 @@ blockquote {
   border: 1px solid;
   border-color: var(--border-color-13);
   position: relative;
+  color: #ffffff;
 
   .ltn__testimonial-img {
     margin-bottom: 30px;
@@ -3569,19 +3570,23 @@ blockquote {
   z-index: 1;
 
   input::-webkit-input-placeholder {
-    color: var(--ltn__color-1);
+    color: #ffffff;
+  }
+
+  textare::-webkit-textarea-placeholder {
+    color: #ffffff;
   }
 
   input::-moz-placeholder {
-    color: var(--ltn__color-1);
+    color: #ffffff;
   }
 
   input:-ms-input-placeholder {
-    color: var(--ltn__color-1);
+    color: #ffffff;
   }
 
   input:-moz-placeholder {
-    color: var(--ltn__color-1);
+    color: #ffffff;
   }
 }
 
@@ -3601,7 +3606,7 @@ blockquote {
 
 .ltn__contact-address-item-3 {
   box-shadow: none;
-  border: 2px solid var(--border-color-11);
+  border: 2px solid #f1f1f1;
   padding: 50px 30px 25px;
 
   i {
@@ -5982,6 +5987,8 @@ input.cart-plus-minus-box {
     line-height: 60px;
     width: 100%;
     margin-bottom: 30px;
+    background-color: #01356d;
+    color: #ffffff;
 
     .current {
       font-weight: 700;

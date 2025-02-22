@@ -1,9 +1,9 @@
-const TestimonialCarouselItem = ({data}) => {
+const TestimonialCarouselItem = ({ data }) => {
   return (
     <>
       <div className="ltn__testimonial-item ltn__testimonial-item-7">
         <div className="ltn__testimoni-info">
-          <p>
+          <p className="text-white">
             <i className="flaticon-left-quote-1"></i>
             {data.description}
           </p>
@@ -12,7 +12,7 @@ const TestimonialCarouselItem = ({data}) => {
               <img src={`/img/testimonial/${data.img}`} alt={`${data.name}`} />
             </div>
             <div className="ltn__testimoni-name-designation">
-              <h5> {data.name}</h5>
+              <h5 style={{ color: "#9b2727" }}> {data.name}</h5>
               <label>{data.type}</label>
             </div>
           </div>

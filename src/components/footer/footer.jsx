@@ -175,7 +175,7 @@ const Footer = function () {
               <Col xs={12} md={6}>
                 <div className="ltn__copyright-design clearfix">
                   <p>
-                    All Rights Reserved @ FNF{" "}
+                    All Rights Reserved @ Facts and Figures
                     <span className="current-year"></span>
                   </p>
                 </div>

@@ -123,9 +123,9 @@ function AboutUs() {
         />
 
         {/* <!-- TESTIMONIAL AREA START (testimonial-7) -->  */}
-        <div
+        {/* <div
           className="ltn__testimonial-area bg-image-top pt-115 pb-70"
-          style={{ backgroundImage: `url("../img/bg/20.jpg")` }}
+          style={{ backgroundColor: "#bfbfbf" }}
         >
           <Container>
             <Row>
@@ -150,10 +150,10 @@ function AboutUs() {
               })}
             </Slider>
           </Container>
-        </div>
+        </div> */}
         {/* <!-- TESTIMONIAL AREA END --> */}
 
-        <div style={{ backgroundColor: "#01356d" }}>
+        <div style={{ backgroundColor: "#bfbfbf" }}>
           <Container>
             <div className="ltn__team-area pt-115 pb-90">
               <Row>
@@ -165,7 +165,7 @@ function AboutUs() {
                       subTitle: "Our Team",
                       title: "Meet Our Wonderful Team",
                     }}
-                    white={true}
+                    white={false}
                   />
                 </Col>
               </Row>
@@ -184,7 +184,7 @@ function AboutUs() {
                         data={data}
                         slug={slug}
                         additionalClassname=""
-                        white={true}
+                        white={false}
                       />
                       // </Col>
                     );
@@ -207,7 +207,7 @@ function AboutUs() {
         </div>
 
         {/* <!-- BLOG AREA START (blog-3) -->  */}
-        <div className="ltn__blog-area pt-115 pb-70">
+        {/* <div className="ltn__blog-area pt-115 pb-70">
           <Container>
             <Row>
               <Col lg={12}>
@@ -233,10 +233,10 @@ function AboutUs() {
               })}
             </Slider>
           </Container>
-        </div>
+        </div> */}
         {/* <!-- BLOG AREA END --> */}
 
-        <div className="ltn__call-to-action-area call-to-action-6 before-bg-bottom">
+        {/* <div className="ltn__call-to-action-area call-to-action-6 before-bg-bottom">
           <Container>
             <Row>
               <Col xs={12}>
@@ -244,7 +244,7 @@ function AboutUs() {
               </Col>
             </Row>
           </Container>
-        </div>
+        </div> */}
       </LayoutOne>
     </>
   );

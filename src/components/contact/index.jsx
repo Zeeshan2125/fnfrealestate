@@ -67,8 +67,11 @@ const Contact = () => {
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
-              <div className="ltn__form-box contact-form-box box-shadow white-bg">
-                <h4 className="title-2">Get A Quote</h4>
+              <div
+                className="ltn__form-box contact-form-box box-shadow"
+                style={{ backgroundColor: "#01356d" }}
+              >
+                <h4 className="title-2 text-white">Get A Quote</h4>
                 <form id="contact-form" action="#" method="post">
                   <div className="row">
                     <div className="col-md-6">
@@ -128,13 +131,14 @@ const Contact = () => {
                     <textarea
                       name="message"
                       placeholder="Enter message"
+                      className="text-white"
                     ></textarea>
                     <span className="inline-icon">
                       <FaPencilAlt />
                     </span>
                   </div>
                   <p>
-                    <label className="input-info-save mb-0">
+                    <label className="input-info-save mb-0 text-white">
                       <input type="checkbox" name="agree" /> Save my name,
                       email, and website in this browser for the next time I
                       comment.
@@ -158,7 +162,7 @@ const Contact = () => {
       {/* <!-- CONTACT MESSAGE AREA END --> */}
 
       {/* <!-- GOOGLE MAP AREA START --> */}
-      <div className="google-map mb-120">
+      <div className="google-map">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9334.271551495209!2d-73.97198251485975!3d40.668170674982946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25b0456b5a2e7%3A0x68bdf865dda0b669!2sBrooklyn%20Botanic%20Garden%20Shop!5e0!3m2!1sen!2sbd!4v1590597267201!5m2!1sen!2sbd"
           width="100%"

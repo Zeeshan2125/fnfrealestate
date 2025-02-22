@@ -1,13 +1,22 @@
 import Link from "next/link";
 import { FaInstagram, FaTwitter, FaFacebookF } from "react-icons/fa";
-const TeamItem = ({ data, baseUrl, slug, additionalClassname , white}) => {
+const TeamItem = ({ data, baseUrl, slug, additionalClassname, white }) => {
   return (
     <>
       <div className={`ltn__team-item ${additionalClassname}`}>
-        <div className="team-img">
-          <img src={`/img/team/${data.image}`} alt="Image" />
+        <div
+          className="team-img"
+          style={{
+            height: "400px",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          {/* <img src={`/img/team/${data.image}`} alt="Image" /> */}
+          <img src={`/img/logo.png`} alt="Image" style={{ width: "80%" }} />
         </div>
-        <div className="team-info">
+        {/* <div className="team-info">
           <h4 style={ white ?  { color: "whitesmoke" } : null} >
             {data.name}
           </h4>
@@ -31,7 +40,7 @@ const TeamItem = ({ data, baseUrl, slug, additionalClassname , white}) => {
               </li>
             </ul>
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   );
