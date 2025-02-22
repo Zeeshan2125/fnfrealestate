@@ -46,7 +46,7 @@ const ProductItem = ({
   );
   const addToCartTooltip = (props) => (
     <Tooltip id="button-tooltip" {...props}>
-     Add To Cart
+      Add To Cart
     </Tooltip>
   );
 
@@ -161,16 +161,14 @@ const ProductItem = ({
           <div className="product-hover-action">
             <ul>
               <li>
-              <OverlayTrigger
+                <OverlayTrigger
                   placement="right"
                   delay={{ show: 250, hide: 400 }}
                   overlay={quickViewTooltip}
                 >
-                <button onClick={() => setModalShow(true)}>
-                  <i className="flaticon-expand"></i>
-                </button>
-
-
+                  <button onClick={() => setModalShow(true)}>
+                    <i className="flaticon-expand"></i>
+                  </button>
                 </OverlayTrigger>
               </li>
               <li>

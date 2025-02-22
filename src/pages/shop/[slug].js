@@ -74,7 +74,6 @@ function ProductDetails({ product }) {
     (compareItem) => compareItem.id === product.id
   );
 
-
   const SlickArrowLeft = ({ currentSlide, slideCount, ...props }) => (
     <button
       {...props}
@@ -226,15 +225,15 @@ function ProductDetails({ product }) {
                         ) : (
                           ""
                         ),
-                          product.rent ? (
-                            <li className="ltn__blog-category">
-                              <Link className="bg-orange" href="#">
-                                For Rent
-                              </Link>
-                            </li>
-                          ) : (
-                            ""
-                          ))
+                        product.rent ? (
+                          <li className="ltn__blog-category">
+                            <Link className="bg-orange" href="#">
+                              For Rent
+                            </Link>
+                          </li>
+                        ) : (
+                          ""
+                        ))
                       }
 
                       <li className="ltn__blog-date">
@@ -1440,7 +1439,6 @@ function ProductDetails({ product }) {
         </div>
         {/* <!-- CALL TO ACTION END --> */}
       </LayoutOne>
-
     </>
   );
 }

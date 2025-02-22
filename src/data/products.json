@@ -7,8 +7,9 @@
       { "img": "32.jpg" },
       { "img": "33.jpg" }
     ],
-    "title": "Luxury villa in Rego Park",
-    "productImg": "1.jpg",
+    "title": "Belgrave Gardens",
+    "productImg": "dubailand.webp",
+    "amount": "Available Soon",
     "price": 69,
     "priceRange": ["Low Budget"],
     "discount": 5,
@@ -43,11 +44,11 @@
     ],
     "date": "May 19, 2021",
     "comments": 35,
-    "locantion": "Belmont Gardens, Chicago",
+    "locantion": "at Dubailand, Dubai",
     "description": {
       "title": "Description",
-      "fullDescription": "Massa tempor nec feugiat nisl pretium. Egestas fringilla phasellus faucibus scelerisque eleifend donec Porta nibh venenatis cras sed felis eget velit aliquet. Neque volutpat ac tincidunt vitae semper quis lectus. Turpis in eu mi bibendum neque egestas congue quisque. Sed elementum tempus egestas sed sed risus pretium quam. Dignissim sodales ut eu sem. Nibh mauris cursus mattis molestee iaculis at erat pellentesque. Id interdum velit laoreet id donec ultrices tincidunt.",
-      "shortDescription": "To the left is the modern kitchen with central island, leading through to the unique breakfast family room which feature glass walls and doors out onto the garden and access to the separate utility room."
+      "fullDescription": "Belgrave Gardens in Dubailand is a state of the art residential project by Ellington properties situated in the heart of Falcon city.Project is backed by luxurious studios and 1, 2, and 3-bedroom apartments, with additional options like 2-bedroom units with a study.Each apartment is designed according to modern style and latest fashion emphasis on space, comfort, high-end finishes and smart home technology.Four beautifully designed buildings that are built over a shared basement, with a central pavilion surrounded by water, creates a peaceful and scenic setting while enhancing luxurious living. Each apartment has been designed with Vast open spaces connecting the kitchen, living, and dining areas. With large windows and balconies, they offer plenty of sunlight and stunning views.",
+      "shortDescription": "Belgrave Gardens’ prime location provides easy access to one of the key attractive landmarks such as Global Village, Downtown Dubai and Dubai Airport only in 20 minutes.This iconic location makes it a favorite destination for buyers and investors offering good ROI for long term play. Belgrave Gardens offers an attractive payment plan, suitable for buyers and investors with 20% as Down payment.Handover date is not yet announced but expected soon."
     },
     "propertyDetails": {
       "propertyId": "HZ29",
@@ -70,26 +71,18 @@
     },
 
     "amenities1": [
-      "Air Conditioning",
-      "Gym",
-      "Microwave",
-      "Swimming Pool",
-      "WiFi"
+      "Beach-inspired swimming pool",
+      "Lazy river and Dog park",
+      "State-of-the-art gymnasium",
+      "Tennis and padel courts"
     ],
     "amenities2": [
-      "Barbeque",
-      "Recreation",
-      "Microwave",
-      "Basketball Cout",
-      "Fireplace"
+      "Themed children’s play areas",
+      "Kids’ pool",
+      "Mini golf course",
+      "Clubhouse"
     ],
-    "amenities3": [
-      "Refrigerator",
-      "Window Coverings",
-      "Washer",
-      "24x7 Security",
-      "Indoor Game"
-    ],
+    "amenities3": ["Retail outlets", "Jogging and walking trails"],
     "AmenitiesList": ["Dishwasher"],
     "agent": {
       "firstName": "Rosalina D.",
@@ -118,8 +111,8 @@
       { "img": "32.jpg" },
       { "img": "33.jpg" }
     ],
-    "title": "New Apartment Nice View",
-    "productImg": "2.jpg",
+    "title": "Verano",
+    "productImg": "Verano-by-Prescott-exterior-5.webp",
     "price": 159,
     "priceRange": ["Medium"],
     "discount": 5,
@@ -221,11 +214,11 @@
     ],
     "date": "May 19, 2021",
     "comments": 35,
-    "locantion": "Belmont Gardens",
+    "locantion": "at Dubai Studio City, Dubai",
     "description": {
       "title": "Description",
-      "fullDescription": "Massa tempor nec feugiat nisl pretium. Egestas fringilla phasellus faucibus scelerisque eleifend donec Porta nibh venenatis cras sed felis eget velit aliquet. Neque volutpat ac tincidunt vitae semper quis lectus. Turpis in eu mi bibendum neque egestas congue quisque. Sed elementum tempus egestas sed sed risus pretium quam. Dignissim sodales ut eu sem. Nibh mauris cursus mattis molestee iaculis at erat pellentesque. Id interdum velit laoreet id donec ultrices tincidunt.",
-      "shortDescription": "To the left is the modern kitchen with central island, leading through to the unique breakfast family room which feature glass walls and doors out onto the garden and access to the separate utility room."
+      "fullDescription": "Verano by Prescott is a masterpiece of contemporary living,combining the essence of luxury and tranquil nature in the heart of Dubai Studio City. Development offers a resort style experience, featuring studio, 1-bedroom, 2-bedroom, and 3-bedroom apartments. Elegant architecture with transparent glass facades, stepped terraces, and lush greenery, Verano Dubai provides an immersive connection between nature and urban living experience. Verano’s luxurious amenities and serene environment promise a lifestyle where every day feels like a vacation. Whether you’re seeking relaxation in the Zen garden, achieving fitness goals in the cutting-edge gym, or connecting with loved ones in the sunken lounge, Verano offers a sanctuary that elevates your living standards to extraordinary heights.",
+      "shortDescription": "Verano’s prime location in Dubai Studio city ensures unmatched connectivity to Dubai’s major landmarks, such as Burj Khalifa, Dubai Marina, and Expo City.The thoughtfully planned community features everything needed for a balanced lifestyle, from supermarkets and fitness centers to recreational spaces and dining options. Verano’s blend of understated luxury and modern convenience positions it as a premier destination for residents and investors alike."
     },
     "propertyDetails": {
       "propertyId": "HZ29",
@@ -248,26 +241,18 @@
     },
 
     "amenities1": [
-      "Air Conditioning",
-      "Gym",
-      "Microwave",
-      "Swimming Pool",
-      "WiFi"
+      "Resort Pool with Pool Bar",
+      "Lazy River and Splash Park",
+      "Zen Garden and Serenity Lawn",
+      "Fitness Studio and Outdoor Gym"
     ],
     "amenities2": [
-      "Barbeque",
-      "Recreation",
-      "Microwave",
-      "Basketball Cout",
-      "Fireplace"
+      "Family Lounge and BBQ Area",
+      "Cinema and Gaming Zone",
+      "Kids’ Play Areas",
+      "Hammock Garden"
     ],
-    "amenities3": [
-      "Refrigerator",
-      "Window Coverings",
-      "Washer",
-      "24x7 Security",
-      "Indoor Game"
-    ],
+    "amenities3": ["Trampoline and Skate Parks"],
     "AmenitiesList": ["Kids Zone"],
     "agent": {
       "firstName": "Rosalina D.",
@@ -296,8 +281,8 @@
       { "img": "32.jpg" },
       { "img": "33.jpg" }
     ],
-    "title": "Citra Puri California Living",
-    "productImg": "3.jpg",
+    "title": "Côtier House",
+    "productImg": "Imtiaz-Cotier-House-exterior-4.webp",
     "price": 49,
     "priceRange": ["High Budget"],
     "discount": 15,
@@ -332,11 +317,11 @@
     ],
     "date": "May 19, 2021",
     "comments": 35,
-    "locantion": "Chicago",
+    "locantion": "at Dubai Islands, Dubai",
     "description": {
       "title": "Description",
-      "fullDescription": "Massa tempor nec feugiat nisl pretium. Egestas fringilla phasellus faucibus scelerisque eleifend donec Porta nibh venenatis cras sed felis eget velit aliquet. Neque volutpat ac tincidunt vitae semper quis lectus. Turpis in eu mi bibendum neque egestas congue quisque. Sed elementum tempus egestas sed sed risus pretium quam. Dignissim sodales ut eu sem. Nibh mauris cursus mattis molestee iaculis at erat pellentesque. Id interdum velit laoreet id donec ultrices tincidunt.",
-      "shortDescription": "To the left is the modern kitchen with central island, leading through to the unique breakfast family room which feature glass walls and doors out onto the garden and access to the separate utility room."
+      "fullDescription": "Côtier House at Dubai islands is a luxurious 13-storey waterfront residential project Imtiaz Developments.Featured with 1 and 2 bedroom apartments, 3 and 4 bedroom penthouses, duplexes suites and Terrace houses catering diverse lifestyles. The project aligns with Dubai’s 2040 Urban Master Plan, prioritizing sustainability and connectivity. Residents can enjoy breathtaking marina views, direct access to a 21-kilometer Blue Flag beach stretch, and proximity to Dubai’s key landmarks—just 10 minutes from Gold Souk Metro Station and 20 minutes from Dubai International Airport.",
+      "shortDescription": "Côtier House by Imtiaz is a masterpiece of luxurious interiors and state-of-the-art amenities, designed to redefine modern living. One of the rare projects offering a rare combination of serene coastline and bustling city life. Inspired by the ocean’s essence, its architecture blends with nature to create a harmonious and tranquil experience. The premium amenities, including infinity pools, golf courses, and lush green spaces, further enhance the lifestyle, offering the perfect balance of luxury, comfort, and modern sophistication. Project also offers a convenient payment plan structure with 20% as down payment. Pricing starts from AED 2.4M.For more detail contact us!"
     },
     "propertyDetails": {
       "propertyId": "HZ29",
@@ -359,26 +344,18 @@
     },
 
     "amenities1": [
-      "Air Conditioning",
-      "Gym",
-      "Microwave",
-      "Swimming Pool",
-      "WiFi"
+      "Infinity Pools",
+      "Clubhouse",
+      "Fitness Center",
+      "Beach Access"
     ],
     "amenities2": [
-      "Barbeque",
-      "Recreation",
-      "Microwave",
-      "Basketball Cout",
-      "Fireplace"
+      "EV Station",
+      "Marina Access",
+      "Golf Courses",
+      "Fully Furnished Residences"
     ],
-    "amenities3": [
-      "Refrigerator",
-      "Window Coverings",
-      "Washer",
-      "24x7 Security",
-      "Indoor Game"
-    ],
+    "amenities3": ["Children’s Play Areas"],
     "AmenitiesList": ["Floor Coverings"],
     "agent": {
       "firstName": "Rosalina D.",
@@ -407,8 +384,8 @@
       { "img": "32.jpg" },
       { "img": "33.jpg" }
     ],
-    "title": "Get Best Property On Our",
-    "productImg": "4.jpg",
+    "title": "VERDANIA 1",
+    "productImg": "VERDAN1A-img-2.webp",
     "price": 19,
     "priceRange": ["Medium"],
     "discount": 10,
@@ -443,11 +420,11 @@
     ],
     "date": "May 19, 2021",
     "comments": 35,
-    "locantion": "New York",
+    "locantion": "at DLRC, Dubai",
     "description": {
       "title": "Description",
-      "fullDescription": "Massa tempor nec feugiat nisl pretium. Egestas fringilla phasellus faucibus scelerisque eleifend donec Porta nibh venenatis cras sed felis eget velit aliquet. Neque volutpat ac tincidunt vitae semper quis lectus. Turpis in eu mi bibendum neque egestas congue quisque. Sed elementum tempus egestas sed sed risus pretium quam. Dignissim sodales ut eu sem. Nibh mauris cursus mattis molestee iaculis at erat pellentesque. Id interdum velit laoreet id donec ultrices tincidunt.",
-      "shortDescription": "To the left is the modern kitchen with central island, leading through to the unique breakfast family room which feature glass walls and doors out onto the garden and access to the separate utility room."
+      "fullDescription": "VERDANIA 1 in Dubailand Residence Complex (DLRC) is a modern residential development offering residents luxury along with a blend of urban connectivity and suburban tranquility. Featuring full furnished studios, 1-bedroom and 2.5-bedroom apartment ensures inclusivity, offering options for single professionals and growing families. With lush green landscapes, modern infrastructure, and community living blend with modernity and comfort makes it ideal for individuals and families looking for a balanced and sustainable way of life. Verdania 1 premier location at Al Ain Road and Emirates Road connects it with famous spots of Dubai including Downtown Dubai, Dubai International Airport, and shopping destinations like Dubai Mall and Dubai Outlet Mall. Buying an apartment at these locations is a lucrative opportunity as they have a strong rental yield potential.Future developments like Dubai Metro Blue Line will twofold the property value in just few years.",
+      "shortDescription": "Verdania 1 includes thoughtfully designed amenities such as swimming pools, a kids’ play area, a gym, a yoga space, a sauna, and even a cinema. This ensures a lifestyle suitable for both mind and body. With family-friendly features like nearby schools, healthcare facilities, and recreational spaces, it caters to all kinds of residents, from professionals to families. The payment plan for Verdania 1 is designed to be flexible, with an initial booking deposit of 10%. The final payment, comprising 40% of the total. Project will be handed over in March 2027."
     },
     "propertyDetails": {
       "propertyId": "HZ29",
@@ -470,26 +447,18 @@
     },
 
     "amenities1": [
-      "Air Conditioning",
-      "Gym",
-      "Microwave",
-      "Swimming Pool",
-      "WiFi"
+      "Infinity Swimming Pool",
+      "Dedicated Kids’ Pool",
+      "Landscaped Gardens and Walking Trails",
+      "Fully Equipped Gym"
     ],
     "amenities2": [
-      "Barbeque",
-      "Recreation",
-      "Microwave",
-      "Basketball Cout",
-      "Fireplace"
+      "Sauna and Wellness Spa",
+      "Cinema Hall",
+      "Elegant Lobby",
+      "Clubhouse and Lounge Spaces"
     ],
-    "amenities3": [
-      "Refrigerator",
-      "Window Coverings",
-      "Washer",
-      "24x7 Security",
-      "Indoor Game"
-    ],
+    "amenities3": ["Outdoor Kids’ Play Area", "Outdoor Showers"],
     "AmenitiesList": ["Floor Coverings"],
     "agent": {
       "firstName": "Rosalina D.",
@@ -524,8 +493,8 @@
       { "img": "32.jpg" },
       { "img": "33.jpg" }
     ],
-    "title": "New Apartment Nice View",
-    "productImg": "5.jpg",
+    "title": "Fairway Residences",
+    "productImg": "Fairway-Residences-exterior-6.webp",
     "price": 149,
     "priceRange": ["Low Budget"],
     "discount": 5,
@@ -560,11 +529,11 @@
     ],
     "date": "May 19, 2021",
     "comments": 35,
-    "locantion": "Chicago",
+    "locantion": "at Dubai Sports City, Dubai",
     "description": {
       "title": "Description",
-      "fullDescription": "Massa tempor nec feugiat nisl pretium. Egestas fringilla phasellus faucibus scelerisque eleifend donec Porta nibh venenatis cras sed felis eget velit aliquet. Neque volutpat ac tincidunt vitae semper quis lectus. Turpis in eu mi bibendum neque egestas congue quisque. Sed elementum tempus egestas sed sed risus pretium quam. Dignissim sodales ut eu sem. Nibh mauris cursus mattis molestee iaculis at erat pellentesque. Id interdum velit laoreet id donec ultrices tincidunt.",
-      "shortDescription": "To the left is the modern kitchen with central island, leading through to the unique breakfast family room which feature glass walls and doors out onto the garden and access to the separate utility room."
+      "fullDescription": "Fairway Residences by Prescott is a prestigious 16-story residential development located in Dubai Sports City, offering a selection of 156 fully furnished studio, one, two, and three-bedroom apartments. Each unit is equipped with the latest smart home technologies, providing residents with a modern and convenient lifestyle. The development’s sleek, contemporary design features expansive glass facades that seamlessly blend with breathtaking views of the verdant golf course, creating an elegant and serene living environment. Residents of Fairway Residences enjoy access to a wide range of exceptional amenities, including an infinity pool, rooftop gym, yoga and meditation areas, jogging track, kids’ pool, splash park, and a multipurpose sports court. Additional luxuries include a cinema, business lounge, co-working spaces, and beautifully landscaped gardens with BBQ areas and firepit seating. Strategically situated near Sheikh Mohammed Bin Zayed Road, Fairway Residences ensures seamless connectivity to key destinations across Dubai, making it an ideal choice for those seeking a harmonious blend of luxury, comfort, and convenience.",
+      "shortDescription": "Download Brochure for more detailed information about floor plans, pricing, and the comprehensive list of amenities."
     },
     "propertyDetails": {
       "propertyId": "HZ29",
@@ -587,25 +556,22 @@
     },
 
     "amenities1": [
-      "Air Conditioning",
-      "Gym",
-      "Microwave",
-      "Swimming Pool",
-      "WiFi"
+      "Infinity Pool",
+      "Rooftop Gym",
+      "Yoga / Meditation Area",
+      "Jogging Track"
     ],
     "amenities2": [
-      "Barbeque",
-      "Recreation",
-      "Microwave",
-      "Basketball Cout",
-      "Fireplace"
+      "Kids Pool",
+      "Multipurpose Sports Court",
+      "BBQ Area",
+      "Indoor/Outdoor Kids Play Area"
     ],
     "amenities3": [
-      "Refrigerator",
-      "Window Coverings",
-      "Washer",
-      "24x7 Security",
-      "Indoor Game"
+      "Gaming Zone/Rooms",
+      "Luxurious Cinema",
+      "Business Lounge",
+      "Co-Working Spaces"
     ],
     "AmenitiesList": ["Supermarket"],
     "agent": {
@@ -635,8 +601,8 @@
       { "img": "32.jpg" },
       { "img": "33.jpg" }
     ],
-    "title": "Citra Puri Los Angles Living",
-    "productImg": "6.jpg",
+    "title": "Evora Residence",
+    "productImg": "Evora-Residences-exterior-2.webp",
     "price": 215,
     "priceRange": ["Low"],
     "discount": 5,
@@ -671,11 +637,11 @@
     ],
     "date": "May 19, 2021",
     "comments": 35,
-    "locantion": "Chicago",
+    "locantion": "at Al Furjan, Dubai",
     "description": {
       "title": "Description",
-      "fullDescription": "Massa tempor nec feugiat nisl pretium. Egestas fringilla phasellus faucibus scelerisque eleifend donec Porta nibh venenatis cras sed felis eget velit aliquet. Neque volutpat ac tincidunt vitae semper quis lectus. Turpis in eu mi bibendum neque egestas congue quisque. Sed elementum tempus egestas sed sed risus pretium quam. Dignissim sodales ut eu sem. Nibh mauris cursus mattis molestee iaculis at erat pellentesque. Id interdum velit laoreet id donec ultrices tincidunt.",
-      "shortDescription": "To the left is the modern kitchen with central island, leading through to the unique breakfast family room which feature glass walls and doors out onto the garden and access to the separate utility room."
+      "fullDescription": "Evora Residences, a masterpiece by Anax Developments, redefines modern living in the heart of Al Furjan, Dubai. Perfectly positioned near the metro, parks, and bustling boulevard, this development offers unmatched convenience and connectivity. Boasting luxurious 1, 2, and 3-bedroom apartments, Evora Residences combines sophisticated design with smart home technology, Bosch integrated appliances, and floor-to-ceiling windows that fill every home with natural light. Residents will enjoy world-class amenities and elegant finishes designed to enhance everyday living.",
+      "shortDescription": "With only 77 exclusive units spread across 10 residential floors, Evora Residences ensures a boutique living experience with privacy and comfort. The development’s attractive 30/70 payment plan makes it an ideal investment opportunity, with completion set for Q2 2026. Discover a new dawn in design and elevate your lifestyle today."
     },
     "propertyDetails": {
       "propertyId": "HZ29",
@@ -698,26 +664,18 @@
     },
 
     "amenities1": [
-      "Air Conditioning",
-      "Gym",
-      "Microwave",
-      "Swimming Pool",
-      "WiFi"
+      "Infinity Pool",
+      "Pool Sunken Lounge",
+      "Outdoor BBQ Area",
+      "Fully Equipped Gym"
     ],
     "amenities2": [
-      "Barbeque",
-      "Recreation",
-      "Microwave",
-      "Basketball Cout",
-      "Fireplace"
+      "Yoga Room",
+      "Jogging Track",
+      "Kids’ Pool",
+      "Kids’ Play Area"
     ],
-    "amenities3": [
-      "Refrigerator",
-      "Window Coverings",
-      "Washer",
-      "24x7 Security",
-      "Indoor Game"
-    ],
+    "amenities3": ["Visitor Parking", "Spacious Lobby", "24-Hour Security"],
     "AmenitiesList": ["Kids Zone"],
     "agent": {
       "firstName": "Rosalina D.",
@@ -746,8 +704,8 @@
       { "img": "32.jpg" },
       { "img": "33.jpg" }
     ],
-    "title": "Citra Puri Los Angles Living",
-    "productImg": "1.jpg",
+    "title": "Aark Residences",
+    "productImg": "Aark-Residences-dubailand-exterior-5.webp",
     "price": 225,
     "priceRange": ["Low Budget", "Medium"],
     "discount": 5,
@@ -782,11 +740,11 @@
     ],
     "date": "May 19, 2021",
     "comments": 35,
-    "locantion": "Chicago",
+    "locantion": "at Dubailand, Dubai",
     "description": {
       "title": "Description",
-      "fullDescription": "Massa tempor nec feugiat nisl pretium. Egestas fringilla phasellus faucibus scelerisque eleifend donec Porta nibh venenatis cras sed felis eget velit aliquet. Neque volutpat ac tincidunt vitae semper quis lectus. Turpis in eu mi bibendum neque egestas congue quisque. Sed elementum tempus egestas sed sed risus pretium quam. Dignissim sodales ut eu sem. Nibh mauris cursus mattis molestee iaculis at erat pellentesque. Id interdum velit laoreet id donec ultrices tincidunt.",
-      "shortDescription": "To the left is the modern kitchen with central island, leading through to the unique breakfast family room which feature glass walls and doors out onto the garden and access to the separate utility room."
+      "fullDescription": "Aark Residences, an exclusive development by Aark Developers, is a masterpiece of modern architecture located in the prestigious Dubailand Residence Complex, Dubai. Featuring luxury, convenience and resort-like ambiance, the project offers 1 and 2-bedroom apartments with modern basement, Ground floor, and ten additional floors. The homes are designed to offer luxury, comfort, and practicality, to ensure each unit feels like a peaceful retreat for residents. Aark Residences, with its prime location and top-notch amenities, offers luxurious living experience that perfectly captures modern urban living. Project is expected to be handed over in December 2024 with a convenient payment plan of 60/40 Structure. The starting price of the base unit (1-bedroom apartment) is 819,000 AED, with 10% down payment..",
+      "shortDescription": "Inspired by the resort lifestyle, Aark Residence offers a range of top-tier amenities to the residents of the community. Inhabitants can enjoy an infinity pool for breathtaking skyline views, Kids play area for enjoyment and Fully equipped gyms to keep you physically fit. The grand lobby lounge, adorned with elegant finishes, offers an inviting and luxurious welcome to residents and guests alike. Aark Residences floor plan featuring vibrant atrium interiors and symmetrical layout centered around the lift and lobby area enhance overall experience blended with luxury and comfort."
     },
     "propertyDetails": {
       "propertyId": "HZ29",
@@ -809,26 +767,18 @@
     },
 
     "amenities1": [
-      "Air Conditioning",
-      "Gym",
-      "Microwave",
-      "Swimming Pool",
-      "WiFi"
+      "Grand Lobby Lounge",
+      "Kids Play Area",
+      "Fully Equipped Gyms",
+      "Infinity Pools"
     ],
     "amenities2": [
-      "Barbeque",
-      "Recreation",
-      "Microwave",
-      "Basketball Cout",
-      "Fireplace"
+      "Lush Green Gardens",
+      "BBQ Areas",
+      "Community Parks",
+      "Retail Outlets"
     ],
-    "amenities3": [
-      "Refrigerator",
-      "Window Coverings",
-      "Washer",
-      "24x7 Security",
-      "Indoor Game"
-    ],
+    "amenities3": ["Parking Area", "Shopping Center"],
     "AmenitiesList": ["Supermarket"],
     "agent": {
       "firstName": "Rosalina D.",
@@ -857,8 +807,8 @@
       { "img": "32.jpg" },
       { "img": "33.jpg" }
     ],
-    "title": "New Apartment Nice View",
-    "productImg": "2.jpg",
+    "title": "Arabian Hills Estate",
+    "productImg": "Arabian-Hills-Estate-by-Deca-Properties-img-12.webp",
     "price": 500,
     "priceRange": ["Low Budget", "Medium"],
     "discount": 5,
@@ -893,11 +843,11 @@
     ],
     "date": "May 19, 2021",
     "comments": 35,
-    "locantion": "Chicago",
+    "locantion": "at Arabian Hills Estate, Dubai",
     "description": {
       "title": "Description",
-      "fullDescription": "Massa tempor nec feugiat nisl pretium. Egestas fringilla phasellus faucibus scelerisque eleifend donec Porta nibh venenatis cras sed felis eget velit aliquet. Neque volutpat ac tincidunt vitae semper quis lectus. Turpis in eu mi bibendum neque egestas congue quisque. Sed elementum tempus egestas sed sed risus pretium quam. Dignissim sodales ut eu sem. Nibh mauris cursus mattis molestee iaculis at erat pellentesque. Id interdum velit laoreet id donec ultrices tincidunt.",
-      "shortDescription": "To the left is the modern kitchen with central island, leading through to the unique breakfast family room which feature glass walls and doors out onto the garden and access to the separate utility room."
+      "fullDescription": "Spread over 244 million square feet of area, Arabian Hills Estate by Deca Properties offers plots for villas, mansions, and Mega Mansion in the heart of Dubai. Prestigious development offers residents a premium lifestyle at iconic locations such as Skydive Dubai and The Dubai Mall. With a starting price of AED 1.7 million, these plots offer a flexible 50/50 payment plan, with just a 10% down payment required to secure your new home. Residents of Concept Arabian Hills Estate are provided with world-class amenities, including a Polo & Equestrian Club, a dedicated 27-kilometer cycling track, and a peaceful lagoon beach. These luxurious residences feature a balanced lifestyle, where relaxation and recreation coexist. The master plan of the Arabian Hills Estate community comprises residential, recreational, and commercial zones. Centralized facilities like parks and community spaces ensure convenience, while well-connected roads and pathways provide access throughout the area.",
+      "shortDescription": "The Modern Floor plan of Arabian Hills Estate by Deca was conceptually designed with a spacious living and dining area. It features elegant furniture, high ceilings, and a blend of natural light and premium materials, emphasizing comfort and aesthetics. The kitchen is designed with a modern and functional layout, offering spacious cabinetry, a central island, and large windows that fill the space with natural light. The architecture reflects a contemporary and elegant design, with clean lines, large windows, and open spaces. Natural light floods the interiors, enhancing the sense of spaciousness and warmth."
     },
     "propertyDetails": {
       "propertyId": "HZ29",
@@ -920,26 +870,20 @@
     },
 
     "amenities1": [
-      "Air Conditioning",
-      "Gym",
-      "Microwave",
-      "Swimming Pool",
-      "WiFi"
+      "Swimming Pools",
+      "Ice Skating Rink",
+      "Football Ground",
+      "Cricket Ground",
+      "Kids Play Area"
     ],
     "amenities2": [
-      "Barbeque",
-      "Recreation",
-      "Microwave",
-      "Basketball Cout",
-      "Fireplace"
+      "Basketball Courts",
+      "Mini Golf Course",
+      "Yoga and Meditation Zones",
+      "24/7 Security",
+      "Retail Outlets"
     ],
-    "amenities3": [
-      "Refrigerator",
-      "Window Coverings",
-      "Washer",
-      "24x7 Security",
-      "Indoor Game"
-    ],
+    "amenities3": ["Healthcare Facilities", "Community Parks", "Theatres"],
     "AmenitiesList": ["Supermarket"],
     "agent": {
       "firstName": "Rosalina D.",
@@ -968,8 +912,8 @@
       { "img": "32.jpg" },
       { "img": "33.jpg" }
     ],
-    "title": "Citra Puri Los Angles Living",
-    "productImg": "4.jpg",
+    "title": "Tivano",
+    "productImg": "Tivano-at-Dubai-Islands-img-1.webp",
     "price": 270,
     "priceRange": ["Low Budget"],
     "discount": 5,
@@ -1004,11 +948,11 @@
     ],
     "date": "May 19, 2021",
     "comments": 35,
-    "locantion": "Chicago",
+    "locantion": "at Dubai Islands, Dubai",
     "description": {
       "title": "Description",
-      "fullDescription": "Massa tempor nec feugiat nisl pretium. Egestas fringilla phasellus faucibus scelerisque eleifend donec Porta nibh venenatis cras sed felis eget velit aliquet. Neque volutpat ac tincidunt vitae semper quis lectus. Turpis in eu mi bibendum neque egestas congue quisque. Sed elementum tempus egestas sed sed risus pretium quam. Dignissim sodales ut eu sem. Nibh mauris cursus mattis molestee iaculis at erat pellentesque. Id interdum velit laoreet id donec ultrices tincidunt.",
-      "shortDescription": "To the left is the modern kitchen with central island, leading through to the unique breakfast family room which feature glass walls and doors out onto the garden and access to the separate utility room."
+      "fullDescription": "Tivano at Dubai Islands is the latest development by AYS offering a combination of luxury, innovation, and comfort. Designed for every lifestyle, Tivano features a variety of residences, 1 to 4-bedroom apartments with duplex units, making it an ideal choice for individual and growing families seeking luxurious retreats. Every apartment features a balcony with a customized jacuzzi. The prime location in the Dubai Islands creates close connectivity by sea and road with Dubai International Airport and Sheikh Zayed Road. The area boasts 60 kilometers of waterfront, 20 kilometers of beaches, and 2 kilometers of parks, creating a lifestyle blended with urban and nature. The floor plan, especially the interior, incorporates styles from renowned European brands such as Scavolini kitchens (Italy), Ceracasa tiles (Spain), and Dornbracht fittings (Germany). Floor-to-ceiling windows allow residents to enjoy panoramic sea views.",
+      "shortDescription": "Residents of Tivano 1 are being offered an array of high-end amenities designed for modern living and ultimate comfort. They can enjoy a state-of-the-art fitness center and a serene spa, along with a fully equipped gym and yoga lounges. For leisure, there are refreshing rooftop infinity pools, kids’ play areas, gaming rooms, and cinema halls with Bose sound systems. The property also features beautifully landscaped gardens and dedicated spaces for social gatherings. The starting Price is just 2,349,826 AED with 20 % on Booking as a Down payment."
     },
     "propertyDetails": {
       "propertyId": "HZ29",
@@ -1031,25 +975,22 @@
     },
 
     "amenities1": [
-      "Air Conditioning",
-      "Gym",
-      "Microwave",
-      "Swimming Pool",
-      "WiFi"
+      "Smart Home System",
+      "Infinity Rooftop Pool",
+      "Rooftop Jacuzzi",
+      "Fully Fitted Gym"
     ],
     "amenities2": [
-      "Barbeque",
-      "Recreation",
-      "Microwave",
-      "Basketball Cout",
-      "Fireplace"
+      "Outdoor Yoga Lounge",
+      "Cinema",
+      "Indoor Kids’ Area",
+      "Game/Club Room"
     ],
     "amenities3": [
-      "Refrigerator",
-      "Window Coverings",
-      "Washer",
-      "24x7 Security",
-      "Indoor Game"
+      "Business Lounge",
+      "Electric Car Parking",
+      "5 Minutes to Beach",
+      "Opposite the Mall"
     ],
     "AmenitiesList": ["Supermarket"],
     "agent": {

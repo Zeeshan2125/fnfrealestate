@@ -280,7 +280,7 @@
   box-shadow: var(--ltn__box-shadow-4);
   border: 1px solid;
   border-color: var(--border-color-13);
-  background-color: var(--white);
+  background-color: transparent;
   .product-img {
     position: relative;
     a {
@@ -1498,10 +1498,10 @@
   right: 0px !important;
 }
 
-.ltn__slider-11-img-slide-arrow-active .slick-arrow  {
+.ltn__slider-11-img-slide-arrow-active .slick-arrow {
   color: var(--ltn__paragraph-color);
 }
-.ltn__slider-11-img-slide-arrow-active .slick-arrow:hover  {
+.ltn__slider-11-img-slide-arrow-active .slick-arrow:hover {
   color: var(--ltn__secondary-color);
 }
 /* ----------------------------------------------------

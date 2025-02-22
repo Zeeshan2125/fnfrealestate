@@ -52,6 +52,7 @@ const RelatedProduct = ({
             <img
               src={`/img/product-3/${productData.productImg}`}
               alt={`${productData.title}`}
+              className="product-latest-img"
             />
           </Link>
           <div className="real-estate-agent">

@@ -19,6 +19,10 @@ import {
   FaDribbble,
   FaTwitter,
   FaFacebookF,
+  FaUserAlt,
+  FaEnvelope,
+  FaPhoneAlt,
+  FaPencilAlt,
 } from "react-icons/fa";
 import ProductRating from "../product/ProductRating";
 
@@ -37,27 +41,6 @@ const QuickViewModal = ({
   };
 
   const dispatch = useDispatch();
-  const { cartItems } = useSelector((state) => state.cart);
-
-  const [selectedProductColor, setSelectedProductColor] = useState(
-    productData.variation ? productData.variation[0].color : ""
-  );
-  const [selectedProductSize, setSelectedProductSize] = useState(
-    productData.variation ? productData.variation[0].size[0].name : ""
-  );
-  const [productStock, setProductStock] = useState(
-    productData.variation
-      ? productData.variation[0].size[0].stock
-      : productData.stock
-  );
-  const [quantityCount, setQuantityCount] = useState(1);
-
-  const productCartQty = getProductCartQuantity(
-    cartItems,
-    productData,
-    selectedProductColor,
-    selectedProductSize
-  );
 
   return (
     <Modal
@@ -73,179 +56,95 @@ const QuickViewModal = ({
           <span aria-hidden="true">&times;</span>
         </Button>
       </Modal.Header>
-      <Modal.Body>
-        <div className="ltn__quick-view-modal-inner">
-          <div className="modal-product-item">
+      <Modal.Body style={{ backgroundColor: "#01356d" }}>
+        <div className="ltn__contact-message-area">
+          <div className="container">
             <div className="row">
-              <div className="col-lg-6 col-12">
-                <div className="modal-product-img">
-                  <img src="/img/product/4.png" alt="#" />
-                </div>
-              </div>
-              <div className="col-lg-6 col-12">
-                <div className="modal-product-info">
-                  <h3>
-                    <Link onClick={modalClose} href={`/shop/${slug}`}>
-                      {productData.title}
-                    </Link>
-                  </h3>
-                  <div className="product-price">
-                    <div>
-                      <span>${discountedprice}</span>
-                      <del>{productprice}</del>
-                      <span className="on-sale">
-                        {productData.discount} % Off
-                      </span>
-                    </div>
-                    {productData.rating && productData.rating > 0 ? (
-                      <div className="product-quickview__rating-wrap">
-                        <div className="product-quickview__rating">
-                          <ProductRating ratingValue={productData.rating} />
-                          <span>({productData.ratingCount})</span>
+              <div className="col-lg-12">
+                <div className="ltn__form-box contact-form-box box-shadow px-0 pb-0 pt-4">
+                  <h4 className="title-2 text-white">Download Brochure</h4>
+                  <form id="contact-form" action="#" method="post">
+                    <div className="row">
+                      <div className="col-md-6">
+                        <div className="input-item input-item-name ltn__custom-icon">
+                          <input
+                            type="text"
+                            name="name"
+                            placeholder="Enter your name"
+                          />
+                          <span className="inline-icon">
+                            <FaUserAlt />
+                          </span>
                         </div>
                       </div>
-                    ) : (
-                      ""
-                    )}
-                  </div>
-                  <hr />
-                
-                  <div className="modal-product-brief">
-                    <p>{productData.description.shortDescription}</p>
-                  </div>
-
-                  <div className="ltn__product-details-menu-3">
-                    <ul>
-                      <li>
-                        <div className="product-quickview__quantity">
-                          <div className="cart-plus-minus">
-                            <button
-                              onClick={() =>
-                                setQuantityCount(
-                                  quantityCount > 1 ? quantityCount - 1 : 1
-                                )
-                              }
-                              className="qtybutton"
-                            >
-                              -
-                            </button>
-                            <input
-                              className="cart-plus-minus-box"
-                              type="text"
-                              value={quantityCount}
-                              readOnly
-                            />
-                          
-                            <button
-                              onClick={() =>
-                                setQuantityCount(
-                                  quantityCount < productStock - productCartQty
-                                    ? quantityCount + 1
-                                    : quantityCount
-                                )
-                              }
-                              className="qtybutton"
-                            >
-                              +
-                            </button>
-                          </div>
+                      <div className="col-md-6">
+                        <div className="input-item input-item-email ltn__custom-icon">
+                          <input
+                            type="email"
+                            name="email"
+                            placeholder="Enter email address"
+                          />
+                          <span className="inline-icon">
+                            <FaEnvelope />
+                          </span>
                         </div>
-                      </li>
-                      <li>
-                        {productStock && productStock > 0 ? (
-                          <button
-                            onClick={() =>
-                              dispatch(
-                                addToCart({
-                                  ...productData,
-                                  quantity: quantityCount,
-                                  selectedProductColor: selectedProductColor
-                                    ? selectedProductColor
-                                    : product.selectedProductColor
-                                    ? product.selectedProductColor
-                                    : null,
-                                  selectedProductSize: selectedProductSize
-                                    ? selectedProductSize
-                                    : product.selectedProductSize
-                                    ? product.selectedProductSize
-                                    : null,
-                                })
-                              )
-                            }
-                            disabled={productCartQty >= productStock}
-                            className="btn-addtocart"
-                          >
-                            <FaShoppingBag className="me-2" /> Add To Cart
-                          </button>
-                        ) : (
-                          <button className="btn-addtocart" disabled>
-                            Out of Stock
-                          </button>
-                        )}
-                      </li>
-                      <li>
-                        <button
-                          className="btn-addtocart"
-                          onClick={
-                            wishlistitem !== undefined
-                              ? () =>
-                                  dispatch(deleteFromWishlist(productData.id))
-                              : () => dispatch(addToWishlist(productData))
-                          }
-                        >
-                          <FaRegHeart />
-                        </button>
-                      </li>
-                      <li>
-                        <button
-                          className="btn-addtocart"
-                          onClick={
-                            compareitem !== undefined
-                              ? () =>
-                                  dispatch(deleteFromCompare(productData.id))
-                              : () => dispatch(addToCompare(productData))
-                          }
-                        >
-                          <FaExchangeAlt />
-                        </button>
-                      </li>
-                    </ul>
-                  </div>
-                  <hr />
-                  <div className="ltn__social-media">
-                    <ul>
-                      <li>Share:</li>
-                      <li>
-                        <Link href="#" title="Facebook">
-                          <FaFacebookF />
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="#" title="Twitter">
-                          <FaTwitter />
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="#" title="Linkedin">
-                          <FaDribbble />
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="#" title="Instagram">
-                          <FaInstagram />
-                        </Link>
-                      </li>
-                    </ul>
-                  </div>
-                  <label className="float-end mb-0">
-                    <Link
-                      onClick={modalClose}
-                      className="text-decoration"
-                      href={`/shop/${slug}`}
-                    >
-                      <small>View Details</small>
-                    </Link>
-                  </label>
+                      </div>
+                      {/* <div className="col-md-6">
+                             <div className="input-item input-item input-item-email ltn__custom-icon">
+                               <Form.Select className="nice-select">
+                                 <option>Select Service Type</option>
+                                 <option>Property Management </option>
+                                 <option>Mortgage Service </option>
+                                 <option>Consulting Service</option>
+                                 <option>Home Buying</option>
+                                 <option>Home selling</option>
+                                 <option>Escrow Services</option>
+                               </Form.Select>
+                               <span className="inline-icon">
+                                 <FaArrowDown />
+                               </span>
+                             </div>
+                           </div> */}
+                      <div className="col-md-12">
+                        <div className="input-item input-item-phone ltn__custom-icon">
+                          <input
+                            type="text"
+                            name="phone"
+                            placeholder="Enter phone number"
+                          />
+                          <span className="inline-icon">
+                            <FaPhoneAlt />
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="input-item input-item-textarea ltn__custom-icon">
+                      <textarea
+                        name="message"
+                        placeholder="Enter message"
+                        className="text-white"
+                      ></textarea>
+                      <span className="inline-icon">
+                        <FaPencilAlt />
+                      </span>
+                    </div>
+                    {/* <p>
+                           <label className="input-info-save mb-0 text-white">
+                             <input type="checkbox" name="agree" /> Save my name,
+                             email, and website in this browser for the next time I
+                             comment.
+                           </label>
+                         </p> */}
+                    <div className="btn-wrapper mt-0">
+                      <button
+                        className="btn theme-btn-1 btn-effect-1 text-uppercase"
+                        type="submit"
+                      >
+                        Submit
+                      </button>
+                    </div>
+                    <p className="form-messege mb-0 mt-20"></p>
+                  </form>
                 </div>
               </div>
             </div>
