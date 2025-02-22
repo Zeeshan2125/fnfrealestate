@@ -212,7 +212,7 @@ function HomePage(props) {
         {/* <AboutUsStyleOne sectionSpace="pt-120 pb-90" /> */}
         <div style={{ backgroundColor: "#BFBFBF" }}>
           <Container>
-            <div className="ltn__team-area pt-115">
+            <div className="ltn__team-area pt-115 pb-90">
               <Row>
                 <Col lg={12}>
                   <TitleSection
