@@ -25,19 +25,33 @@ const Footer = function () {
           <Container fluid>
             <Row className="justify-content-center">
               <Col xs={12} sm={6} xl={3}>
-                <div className="footer-widget footer-about-widget">
+                <div className="footer-widget footer-about-widget footer-logo-box">
                   <div className="footer-logo">
                     <div className="footer-site-logo">
                       {/* <img src="/img/logo.png" alt="Logo" /> */}
                       <img src="/img/logo-2.png" alt="Logo" />
                     </div>
                   </div>
-                  <p>
+                  {/* <p>
                     Lorem Ipsum is simply dummy text of the and typesetting
                     industry. Lorem Ipsum is dummy text of the printing. Lorem
                     Ipsum is simply dummy text of the and typesetting industry.
                     Lorem Ipsum is dummy text of the printing.
-                  </p>
+                  </p> */}
+                  <div className="">
+                    <h2
+                      className="slide-sub-title mb-1 footer-fnf-h2"
+                      style={{ color: "#ffffff" }}
+                    >
+                      Facts and Figures
+                    </h2>
+                    <h5
+                      className="slide-sub-title mb-0 footer-fnf-h5"
+                      style={{ color: "#ffffff" }}
+                    >
+                      Real Estate
+                    </h5>
+                  </div>
                 </div>
               </Col>
               <Col xs={12} sm={6} xl={2}>
@@ -86,7 +100,10 @@ const Footer = function () {
                           <FaMapMarkerAlt />
                         </div>
                         <div className="footer-address-info">
-                          <p>Brooklyn, New York, United States</p>
+                          <p>
+                            Office No. 1011, Clover Bay Tower - Marasi Dr -
+                            Business Bay - Dubai - United Arab Emirates
+                          </p>
                         </div>
                       </li>
                       <li>
@@ -102,7 +119,7 @@ const Footer = function () {
                           <FaEnvelope />
                         </div>
                         <div className="footer-address-info">
-                          <p>example@example.com</p>
+                          <p>admin@fnfrealestate.com</p>
                         </div>
                       </li>
                     </ul>
@@ -172,15 +189,15 @@ const Footer = function () {
         >
           <div className="container-fluid ltn__border-top-2">
             <Row>
-              <Col xs={12} md={6}>
-                <div className="ltn__copyright-design clearfix">
+              <Col xs={12} md={12}>
+                <div className="ltn__copyright-design clearfix text-center">
                   <p>
                     All Rights Reserved @ Facts and Figures
                     <span className="current-year"></span>
                   </p>
                 </div>
               </Col>
-              <Col xs={12} md={6} className="align-self-center">
+              {/* <Col xs={12} md={6} className="align-self-center">
                 <div className="ltn__copyright-menu text-end">
                   <ul>
                     <li>
@@ -194,7 +211,7 @@ const Footer = function () {
                     </li>
                   </ul>
                 </div>
-              </Col>
+              </Col> */}
             </Row>
           </div>
         </div>

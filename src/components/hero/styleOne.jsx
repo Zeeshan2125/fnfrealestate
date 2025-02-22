@@ -45,6 +45,7 @@ function HeroSectionStyleOne({ data }) {
     prevArrow: <SlickArrowLeft />,
     nextArrow: <SlickArrowRight />,
     autoplay: true,
+    autoplaySpeed: 5000,
   };
 
   const [isOpen, setOpen] = useState(false);

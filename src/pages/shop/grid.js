@@ -262,7 +262,7 @@ function ShopGrid() {
       {/* <!-- PRODUCT DETAILS AREA END -->
 
     <!-- CALL TO ACTION START (call-to-action-6) --> */}
-      <div className="ltn__call-to-action-area call-to-action-6 before-bg-bottom">
+      {/* <div className="ltn__call-to-action-area call-to-action-6 before-bg-bottom">
         <Container>
           <Row>
             <Col xs={12}>
@@ -270,7 +270,7 @@ function ShopGrid() {
             </Col>
           </Row>
         </Container>
-      </div>
+      </div> */}
       {/* <!-- CALL TO ACTION END --> */}
     </LayoutOne>
   );

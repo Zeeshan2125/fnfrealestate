@@ -25,7 +25,7 @@ const callToActionstyleTwo = () => {
                     className="btn btn-transparent btn-effect-3"
                     style={{ border: "1px solid #111111" }}
                   >
-                    CONTACT US
+                    CHAT ON WHATSAPP
                   </Link>
                 </div>
               </div>

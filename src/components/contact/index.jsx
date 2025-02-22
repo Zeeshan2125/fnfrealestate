@@ -28,21 +28,7 @@ const Contact = () => {
                   <img src="/img/icons/10.png" alt="Icon Image" />
                 </div>
                 <h3>Email Address</h3>
-                <p>
-                  info@webmail.com <br />
-                  jobs@webexample.com
-                </p>
-              </div>
-            </div>
-            <div className="col-lg-4">
-              <div className="ltn__contact-address-item ltn__contact-address-item-3 box-shadow">
-                <div className="ltn__contact-address-icon">
-                  <img src="/img/icons/11.png" alt="Icon Image" />
-                </div>
-                <h3>Phone Number</h3>
-                <p>
-                  +0123-456789 <br /> +987-6543210
-                </p>
+                <p>admin@fnfrealestate.com</p>
               </div>
             </div>
             <div className="col-lg-4">
@@ -52,9 +38,18 @@ const Contact = () => {
                 </div>
                 <h3>Office Address</h3>
                 <p>
-                  18/A, New Born Town Hall <br />
-                  New York, US
+                  Office No. 1011, Clover Bay Tower - Marasi Dr - Business Bay -
+                  Dubai - United Arab Emirates
                 </p>
+              </div>
+            </div>
+            <div className="col-lg-4">
+              <div className="ltn__contact-address-item ltn__contact-address-item-3 box-shadow">
+                <div className="ltn__contact-address-icon">
+                  <img src="/img/icons/11.png" alt="Icon Image" />
+                </div>
+                <h3>Phone Number</h3>
+                <p>+0123-456789</p>
               </div>
             </div>
           </div>
