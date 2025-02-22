@@ -29,11 +29,7 @@ function BlogGrid() {
   return (
     <>
       <LayoutOne topbar={true}>
-        <ShopBreadCrumb
-          title="Blog Grid"
-          sectionPace=""
-          currentSlug="Blog Grid"
-        />
+        <ShopBreadCrumb title="News" sectionPace="" currentSlug="News" />
 
         <div className="ltn__blog-area ltn__blog-item-3-normal mb-100">
           <Container>
