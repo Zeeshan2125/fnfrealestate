@@ -58,10 +58,10 @@ function HeroSectionStyleOne({ data }) {
         onClose={() => setOpen(false)}
       />
 
-      <div className="ltn__slider-area ltn__slider-3 section-bg-1">
+      <div className="ltn__slider-area ltn__slider-3">
         <Slider
           {...Herosettings}
-          className="ltn__slide-one-active slick-slide-arrow-1 slick-slide-dots-1"
+          className="ltn__slide-one-active slick-slide-arrow-1 slick-slide-dots-1 home-hero-slide"
         >
           {data.map((item, key) => {
             return (

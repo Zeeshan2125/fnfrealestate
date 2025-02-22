@@ -149,6 +149,10 @@ font-family: 'Poppins', sans-serif;
   padding: 0 15px;
 }
 
+.home-hero-slide .slick-slide {
+  padding: 0 0px;
+}
+
 .slick-prev::before,
 .slick-next::before {
   display: none;
@@ -389,6 +393,7 @@ body {
   font-family: var(--ltn__body-font);
   line-height: 1.8;
   margin: 0 auto;
+  background-color: #bfbfbf;
 }
 
 select {
@@ -1338,7 +1343,7 @@ ul {
 #scrollUp {
   position: fixed;
   z-index: 2147483647;
-  background-color: var(--section-bg-1);
+  background-color: #bfbfbf;
   color: var(--ltn__heading-color);
   bottom: 70px;
   font-size: 20px;

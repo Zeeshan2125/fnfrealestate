@@ -72,6 +72,21 @@ function HomePage(props) {
     {
       image: "/img/fnf-home3.png",
     },
+    {
+      image: "/img/fnf-home9.png",
+    },
+    {
+      image: "/img/fnf-home4.png",
+    },
+    {
+      image: "/img/fnf-home5.png",
+    },
+    {
+      image: "/img/fnf-home6.png",
+    },
+    {
+      image: "/img/fnf-home7.png",
+    },
   ];
 
   const SlickArrowLeft = ({ currentSlide, slideCount, ...props }) => (

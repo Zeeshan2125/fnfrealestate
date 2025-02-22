@@ -95,35 +95,40 @@ const HeaderStyleOne = function ({ SetToggleClassName, topbar }) {
             "ltn__header-middle-area ltn__header-sticky ltn__sticky-bg-white",
             scroll > headerHeight && "sticky-active"
           )}
+          style={{ backgroundColor: "#BFBFBF" }}
         >
           <Container>
-            <Row className="justify-content-between">
-              <Col>
-                <div className="site-logo-wrap">
-                  <div className="d-flex align-items-center gap-3">
-                    {/* <div className="site-logo">
-                      <Link href="/">
-                        <img src="/img/logo.png" alt="Logo" />
-                      </Link>
-                    </div> */}
-                    <div className="">
-                      <h1
-                        className="slide-sub-title mb-0 "
-                        style={{ color: "#01356d" }}
-                      >
-                        Facts <span style={{ color: "#9b2727" }}>and</span>{" "}
-                        Figures
-                      </h1>
-                      {/* <p
-                        className="slide-sub-title mb-0"
-                        style={{ color: "#01356d" }}
-                      >
-                        Business with no complaints
-                      </p> */}
-                    </div>
-                  </div>
-                </div>
-              </Col>
+            <div className="site-logo-mbl">
+              <Link href="/">
+                <img src="/img/logo.png" alt="Logo" />
+              </Link>
+            </div>
+            <div className="d-flex justify-content-between align-items-center">
+              {/* <div> */}
+              {/* <div className="site-logo-wrap"> */}
+              {/* <div className=" header-new-area"> */}
+              <div className="site-logo">
+                <Link href="/">
+                  <img src="/img/logo.png" alt="Logo" />
+                </Link>
+              </div>
+              {/* </div> */}
+              {/* </div> */}
+              {/* </div> */}
+              <div className="facts-box">
+                <h1
+                  className="slide-sub-title mb-0 facts-title"
+                  style={{ color: "#01356d" }}
+                >
+                  Facts <span style={{ color: "#9b2727" }}>and</span> Figures
+                </h1>
+                <h1
+                  className="slide-sub-title mb-0 estate-mb-text"
+                  style={{ color: "#01356d" }}
+                >
+                  Real Estate
+                </h1>
+              </div>
               {/* <Col className="header-menu-column">
                 <div className="header-menu d-none d-xl-block">
                   <nav>
@@ -133,11 +138,7 @@ const HeaderStyleOne = function ({ SetToggleClassName, topbar }) {
                   </nav>
                 </div>
               </Col> */}
-              <Col
-                xs={4}
-                lg={""}
-                className="ltn__header-options ltn__header-options-2"
-              >
+              <div className="ltn__header-options ltn__header-options-2">
                 {/* <div className="header-search-wrap">
                   <div
                     className={`header-search-1 ${
@@ -254,8 +255,8 @@ const HeaderStyleOne = function ({ SetToggleClassName, topbar }) {
                     </svg>
                   </button>
                 </div>
-              </Col>
-            </Row>
+              </div>
+            </div>
           </Container>
         </div>
         {/* <!-- ltn__header-middle-area end --> */}

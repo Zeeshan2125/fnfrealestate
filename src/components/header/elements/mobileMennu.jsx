@@ -58,10 +58,11 @@ const MobileMenu = function ({ offCanVastoggleBtn, closeSideBar }) {
         className={`ltn__utilize ltn__utilize-mobile-menu   ${
           offCanVastoggleBtn ? "ltn__utilize-open" : ""
         }`}
+        style={{ backgroundColor: "#bfbfbf" }}
       >
         <div className="ltn__utilize-menu-inner ltn__scrollbar">
           <div className="ltn__utilize-menu-head">
-            <div className="site-logo">
+            <div className="hamburger-site-logo">
               <Link href="/">
                 <img src="/img/logo.png" alt="Logo" />
               </Link>
@@ -206,9 +207,9 @@ const MobileMenu = function ({ offCanVastoggleBtn, closeSideBar }) {
                   </li>
                 </ul> */}
               </li>
-              <li>
+              {/* <li>
                 <Link href="/blog/grid">News</Link>
-                {/* <span
+                <span
                   className="menu-expand"
                   onClick={onClickHandler}
                   aria-hidden="true"
@@ -226,8 +227,8 @@ const MobileMenu = function ({ offCanVastoggleBtn, closeSideBar }) {
                   <li>
                     <Link href="/blog/right-sidebar">News Right sidebar</Link>
                   </li>
-                </ul> */}
-              </li>
+                </ul>
+              </li> */}
               {/* <li>
                 <Link href="#">Pages</Link>
                 <span

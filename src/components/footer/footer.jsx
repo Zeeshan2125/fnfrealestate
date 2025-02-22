@@ -27,7 +27,7 @@ const Footer = function () {
               <Col xs={12} sm={6} xl={3}>
                 <div className="footer-widget footer-about-widget">
                   <div className="footer-logo">
-                    <div className="site-logo">
+                    <div className="footer-site-logo">
                       {/* <img src="/img/logo.png" alt="Logo" /> */}
                       <img src="/img/logo-2.png" alt="Logo" />
                     </div>
@@ -54,9 +54,9 @@ const Footer = function () {
                       <li>
                         <Link href="/shop/grid">Projects</Link>
                       </li>
-                      <li>
+                      {/* <li>
                         <Link href="/blog/grid">News</Link>
-                      </li>
+                      </li> */}
                       <li>
                         <Link href="/contact">Contact us</Link>
                       </li>
@@ -175,7 +175,7 @@ const Footer = function () {
               <Col xs={12} md={6}>
                 <div className="ltn__copyright-design clearfix">
                   <p>
-                    All Rights Reserved @ Company{" "}
+                    All Rights Reserved @ FNF{" "}
                     <span className="current-year"></span>
                   </p>
                 </div>
