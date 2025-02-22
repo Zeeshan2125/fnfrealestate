@@ -173,10 +173,14 @@ const Footer = function () {
                   {/* <h5 className="mt-30">Location</h5> */}
                   <div>
                     <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9334.271551495209!2d-73.97198251485975!3d40.668170674982946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25b0456b5a2e7%3A0x68bdf865dda0b669!2sBrooklyn%20Botanic%20Garden%20Shop!5e0!3m2!1sen!2sbd!4v1590597267201!5m2!1sen!2sbd"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3623.050931820203!2d55.2733858751094!3d25.18504983169096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f693afb4babe9%3A0xdda585df6ed9b8ae!2sClover%20Bay%20Tower!5e0!3m2!1sen!2s!4v1708700000000"
                       width="100%"
-                      height="200px"
-                    ></iframe>
+                      height="200"
+                      style={{ border: 0 }}
+                      allowFullScreen=""
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                    />
                   </div>
                 </div>
               </Col>
