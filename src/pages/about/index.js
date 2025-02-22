@@ -207,7 +207,7 @@ function AboutUs() {
         </div>
 
         {/* <!-- BLOG AREA START (blog-3) -->  */}
-        <div className="ltn__blog-area pb-70">
+        <div className="ltn__blog-area pt-115 pb-70">
           <Container>
             <Row>
               <Col lg={12}>

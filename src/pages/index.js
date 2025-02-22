@@ -663,8 +663,14 @@ function HomePage(props) {
         </div>
         {/* <!-- TESTIMONIAL AREA END --> */}
 
+        {/* <!-- CONTACT AREA START (blog-3) -->  */}
+        <div className="ltn__blog-area">
+          <CallToActionstyleTwo />
+        </div>
+        {/* <!-- CONTACT AREA END --> */}
+
         {/* <!-- BLOG AREA START (blog-3) -->  */}
-        <div className="ltn__blog-area pb-70">
+        <div className="ltn__blog-area pt-115 pb-70">
           <Container>
             <Row>
               <Col lg={12}>
@@ -692,12 +698,6 @@ function HomePage(props) {
           </Container>
         </div>
         {/* <!-- BLOG AREA END --> */}
-
-        {/* <!-- CONTACT AREA START (blog-3) -->  */}
-        <div className="ltn__blog-area pb-70">
-          <CallToActionstyleTwo />
-        </div>
-        {/* <!-- CONTACT AREA END --> */}
 
         <div className="ltn__call-to-action-area call-to-action-6 before-bg-bottom">
           <Container>
