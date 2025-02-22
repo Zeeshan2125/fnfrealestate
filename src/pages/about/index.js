@@ -17,7 +17,7 @@ import TeamItem from "@/components/team";
 import TeamData from "@/data/team";
 
 function AboutUs() {
-  const agents = getProducts(TeamData, "buying", "featured", 3);
+  const agents = getProducts(TeamData, "buying", "featured", 6);
   const featureDataSorted = getProducts(featureData, "buying", "featured", 3);
   const vision = [
     {
