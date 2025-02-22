@@ -64,13 +64,13 @@ function HomePage(props) {
 
   const sliderData = [
     {
-      image: "/img/fnf-home.jpg",
+      image: "/img/fnf-home.png",
     },
     {
-      image: "/img/fnf-home2.jpeg",
+      image: "/img/fnf-home2.png",
     },
     {
-      image: "/img/fnf-home3.jpeg",
+      image: "/img/fnf-home3.png",
     },
   ];
 
@@ -296,7 +296,7 @@ function HomePage(props) {
       <!-- FEATURE AREA START ( Feature - 6) --> */}
 
         {/* PRODUCT SLIDER AREA START */}
-        <div className="ltn__product-slider-area ltn__product-gutter pt-115 pb-90 plr--7">
+        {/* <div className="ltn__product-slider-area ltn__product-gutter pt-115 pb-90 plr--7">
           <Container fluid>
             <Row>
               <Col lg={12}>
@@ -359,7 +359,7 @@ function HomePage(props) {
               </Col>
             </Row>
           </Container>
-        </div>
+        </div> */}
         {/* PRODUCT SLIDER AREA END */}
 
         {/* <div className="ltn__apartments-plan-area pb-70">
@@ -664,7 +664,7 @@ function HomePage(props) {
         {/* <!-- CATEGORY AREA END --> */}
 
         {/* <!-- TESTIMONIAL AREA START (testimonial-7) -->  */}
-        <div
+        {/* <div
           className="ltn__testimonial-area bg-image-top pt-115 pb-70"
           style={{ backgroundImage: `url("../img/bg/20.jpg")` }}
         >
@@ -691,7 +691,7 @@ function HomePage(props) {
               })}
             </Slider>
           </Container>
-        </div>
+        </div> */}
         {/* <!-- TESTIMONIAL AREA END --> */}
 
         {/* <!-- CONTACT AREA START (blog-3) -->  */}
@@ -701,7 +701,7 @@ function HomePage(props) {
         {/* <!-- CONTACT AREA END --> */}
 
         {/* <!-- BLOG AREA START (blog-3) -->  */}
-        <div className="ltn__blog-area pt-115 pb-70">
+        {/* <div className="ltn__blog-area pt-115 pb-70">
           <Container>
             <Row>
               <Col lg={12}>
@@ -727,16 +727,16 @@ function HomePage(props) {
               })}
             </Slider>
           </Container>
-        </div>
+        </div> */}
         {/* <!-- BLOG AREA END --> */}
 
         {/* <!-- CONTACT MESSAGE AREA START --> */}
-        <div className="ltn__contact-message-area mb-120">
+        {/* <div className="ltn__contact-message-area mb-120 mt-115">
           <div className="container">
             <div className="row">
               <div className="col-lg-12">
                 <div className="ltn__form-box contact-form-box box-shadow white-bg">
-                  <h4 className="title-2">Get A Quote</h4>
+                  <h4 className="title-2">Contact Us</h4>
                   <form id="contact-form" action="#" method="post">
                     <div className="row">
                       <div className="col-md-6">
@@ -822,10 +822,10 @@ function HomePage(props) {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
         {/* <!-- CONTACT MESSAGE AREA END --> */}
 
-        <div className="ltn__call-to-action-area call-to-action-6 before-bg-bottom">
+        {/* <div className="ltn__call-to-action-area call-to-action-6 before-bg-bottom">
           <Container>
             <Row>
               <Col xs={12}>
@@ -833,7 +833,7 @@ function HomePage(props) {
               </Col>
             </Row>
           </Container>
-        </div>
+        </div> */}
       </LayoutOne>
     </>
   );

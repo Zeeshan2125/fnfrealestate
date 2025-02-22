@@ -136,7 +136,7 @@ const Footer = function () {
               </Col>
               <Col xs={12} sm={6} xl={3}>
                 <div className="footer-widget footer-newsletter-widget">
-                  <h4 className="footer-title">We Accept</h4>
+                  <h4 className="footer-title">Location</h4>
                   {/* <p>
                     Subscribe to our weekly Newsletter and receive updates via
                     email.
@@ -152,13 +152,13 @@ const Footer = function () {
                       </div>
                     </form>
                   </div> */}
-                  <img src="/img/icons/payment-4.png" alt="Payment Image" />
-                  <h5 className="mt-30">Location</h5>
+                  {/* <img src="/img/icons/payment-4.png" alt="Payment Image" /> */}
+                  {/* <h5 className="mt-30">Location</h5> */}
                   <div>
                     <iframe
                       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9334.271551495209!2d-73.97198251485975!3d40.668170674982946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25b0456b5a2e7%3A0x68bdf865dda0b669!2sBrooklyn%20Botanic%20Garden%20Shop!5e0!3m2!1sen!2sbd!4v1590597267201!5m2!1sen!2sbd"
                       width="100%"
-                      height="20%"
+                      height="200px"
                     ></iframe>
                   </div>
                 </div>

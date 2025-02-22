@@ -122,7 +122,7 @@
 }
 .site-logo {
   // min-width: 185px;
-  width: 30%;
+  width: 20%;
   height: 100%;
   display: flex;
   align-items: center;
@@ -141,6 +141,10 @@
     position: relative;
     top: -2px;
   }
+}
+
+.facts-title {
+  font-size: 52px;
 }
 
 .ltn__header-1 {
