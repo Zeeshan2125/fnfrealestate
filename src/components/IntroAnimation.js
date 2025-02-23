@@ -34,7 +34,7 @@ export default function IntroAnimation({ onComplete }) {
             transition={{ duration: 0.8 }}
             className="fw-bold display-4 text-white"
           >
-            Fact and Figure
+            Facts and Figures
           </motion.h1>
           <motion.h2
             initial={{ opacity: 0, y: 10 }}

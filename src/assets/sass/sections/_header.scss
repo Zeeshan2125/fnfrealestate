@@ -1526,6 +1526,10 @@
   display: block;
   padding: 8px 24px 8px 0;
   text-transform: uppercase;
+  color: #111111;
+}
+.ltn__utilize-menu > ul > li > a:hover {
+  color: #9b2727;
 }
 .ltn__utilize-menu > ul > li .sub-menu {
   position: static;
