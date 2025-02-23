@@ -66,7 +66,7 @@ const Contact = () => {
                 className="ltn__form-box contact-form-box box-shadow"
                 style={{ backgroundColor: "#01356d" }}
               >
-                <h4 className="title-2 text-white">Get A Quote</h4>
+                <h4 className="title-2 text-white">Let&apos;s Connect</h4>
                 <form id="contact-form" action="#" method="post">
                   <div className="row">
                     <div className="col-md-6">
@@ -144,7 +144,7 @@ const Contact = () => {
                       className="btn theme-btn-1 btn-effect-1 text-uppercase"
                       type="submit"
                     >
-                      get a free service
+                      Send
                     </button>
                   </div>
                   <p className="form-messege mb-0 mt-20"></p>
