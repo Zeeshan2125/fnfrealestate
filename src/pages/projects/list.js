@@ -114,9 +114,9 @@ function ShopGrid() {
                           <Nav.Link eventKey="first">
                             <FaThLarge />
                           </Nav.Link>
-                          <Nav.Link eventKey="second">
+                          {/* <Nav.Link eventKey="second">
                             <FaThList />
-                          </Nav.Link>
+                          </Nav.Link> */}
                         </Nav>
                       </div>
                     </li>
