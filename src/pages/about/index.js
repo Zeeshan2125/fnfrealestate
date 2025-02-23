@@ -154,7 +154,7 @@ function AboutUs() {
         </div> */}
         {/* <!-- TESTIMONIAL AREA END --> */}
 
-        <div style={{ backgroundColor: "#bfbfbf" }}>
+        <div>
           <Container>
             <div className="ltn__team-area pt-115 pb-90">
               <Row>

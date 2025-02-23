@@ -84,7 +84,7 @@ const RelatedProduct = ({
             <ul>
               <li
                 className="d-flex gap-1 align-items-center"
-                style={{ color: "#9b2727", fontWeight: "600" }}
+                style={{ fontWeight: "600" }}
               >
                 {/* <Link href={`/${baseUrl}/${slug}`}> */}
                 <i className="flaticon-pin"></i>
@@ -93,7 +93,7 @@ const RelatedProduct = ({
               </li>
             </ul>
           </div>
-          <ul className="ltn__plot-brief" style={{ color: "#111111" }}>
+          <ul className="ltn__plot-brief">
             <li className="d-flex justify-content-between mt-3 me-0">
               <span className="" style={{ fontWeight: "400" }}>
                 Developer:

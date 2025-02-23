@@ -58,7 +58,6 @@ const MobileMenu = function ({ offCanVastoggleBtn, closeSideBar }) {
         className={`ltn__utilize ltn__utilize-mobile-menu   ${
           offCanVastoggleBtn ? "ltn__utilize-open" : ""
         }`}
-        style={{ backgroundColor: "#bfbfbf" }}
       >
         <div className="ltn__utilize-menu-inner ltn__scrollbar">
           <div className="ltn__utilize-menu-head">

@@ -81,8 +81,8 @@
       margin-right: 10px;
 
       a {
-        background-color: #01356d;
-        color: #ffffff;
+        background-color: var(--section-bg-1);
+        color: var(--ltn__paragraph-color);
         display: block;
         width: 40px;
         height: 40px;
@@ -5112,7 +5112,6 @@ input.cart-plus-minus-box {
   padding-left: 0;
   display: flex;
   flex-flow: row wrap;
-  color: #111111;
 
   li {
     width: 50%;

@@ -100,7 +100,6 @@ const HeaderStyleOne = function ({ SetToggleClassName, topbar }) {
             "ltn__header-middle-area ltn__header-sticky ltn__sticky-bg-white",
             scroll > headerHeight && "sticky-active"
           )}
-          style={{ backgroundColor: "#BFBFBF" }}
         >
           <Container>
             <div className="d-flex justify-content-between align-items-center">
