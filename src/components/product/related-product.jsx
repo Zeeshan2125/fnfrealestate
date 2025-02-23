@@ -71,7 +71,7 @@ const RelatedProduct = ({
             <ul>
               <li
                 className={`sale-badge text-white`}
-                style={{ backgroundColor: "#01356d" }}
+                style={{ backgroundColor: "#9b2727" }}
               >
                 {productData.projectType}
               </li>
@@ -171,7 +171,7 @@ const RelatedProduct = ({
         </div>
         <div
           className="product-info-bottom"
-          style={{ backgroundColor: "#9b2727" }}
+          style={{ backgroundColor: "#043575" }}
         >
           <div className="product-price">
             <span className="text-white">
