@@ -55,7 +55,7 @@ const RelatedProduct = ({
               className="product-latest-img"
             />
           </Link>
-          <div className="real-estate-agent">
+          {/* <div className="real-estate-agent">
             <div className="agent-img">
               <Link href={`/${baseUrl}/${slug}`}>
                 <img
@@ -64,7 +64,7 @@ const RelatedProduct = ({
                 />
               </Link>
             </div>
-          </div>
+          </div> */}
         </div>
         <div className="product-info">
           <div className="product-badge">
@@ -83,7 +83,7 @@ const RelatedProduct = ({
           <div className="product-img-location">
             <ul>
               <li
-                className="d-flex gap-2 align-items-center"
+                className="d-flex gap-1 align-items-center"
                 style={{ color: "#9b2727", fontWeight: "600" }}
               >
                 {/* <Link href={`/${baseUrl}/${slug}`}> */}
