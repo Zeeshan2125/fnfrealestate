@@ -66,7 +66,7 @@ const Footer = function () {
                         <Link href="/about">About</Link>
                       </li>
                       <li>
-                        <Link href="/shop/grid">Projects</Link>
+                        <Link href="/projects/list">Projects</Link>
                       </li>
                       {/* <li>
                         <Link href="/blog/grid">News</Link>

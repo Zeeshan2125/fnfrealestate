@@ -82,13 +82,13 @@ const MenuList = ({ addListing }) => {
         </ul> */}
       </li>
       <li className="menu-icon">
-        <Link href="/shop/grid">Projects</Link>
+        <Link href="/projects/list">Projects</Link>
         {/* <ul>
           <li>
             <Link href="/shop">Property</Link>
           </li>
           <li>
-            <Link href="/shop/grid">Property Grid</Link>
+            <Link href="/projects/list">Property Grid</Link>
           </li>
           <li>
             <Link href="/shop/list">Property List</Link>
@@ -210,7 +210,7 @@ const MenuList = ({ addListing }) => {
                 <Link href="/shop/right-sidebar">Property right sidebar</Link>
               </li>
               <li>
-                <Link href="/shop/grid">Property Grid</Link>
+                <Link href="/projects/list">Property Grid</Link>
               </li>
               <li>
                 <Link href="/shop/list">Property List</Link>

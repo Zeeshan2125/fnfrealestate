@@ -159,7 +159,7 @@ const MobileMenu = function ({ offCanVastoggleBtn, closeSideBar }) {
                 </ul> */}
               </li>
               <li>
-                <Link href="/shop/grid">Projects</Link>
+                <Link href="/projects/list">Projects</Link>
                 {/* <span
                   className="menu-expand"
                   onClick={onClickHandler}
@@ -170,7 +170,7 @@ const MobileMenu = function ({ offCanVastoggleBtn, closeSideBar }) {
                     <Link href="/shop">Property</Link>
                   </li>
                   <li>
-                    <Link href="/shop/grid">Property Grid</Link>
+                    <Link href="/projects/list">Property Grid</Link>
                   </li>
                   <li>
                     <Link href="/shop/list">Property List</Link>

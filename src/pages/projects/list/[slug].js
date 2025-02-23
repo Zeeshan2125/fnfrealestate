@@ -18,7 +18,7 @@ import {
   FaEnvelope,
   FaGlobe,
   FaPencilAlt,
-  FaCalendarAlt
+  FaCalendarAlt,
 } from "react-icons/fa";
 import BreadCrumb from "@/components/breadCrumbs";
 import { LayoutOne } from "@/layouts";
@@ -30,13 +30,15 @@ import RelatedProduct from "@/components/product/related-product";
 import FollowUs from "@/components/followUs";
 import Tags from "@/components/tags";
 import blogData from "@/data/blog";
-import CallToAction from "@/components/callToAction";
+import QuickViewtModal from "@/components/modals/quickViewModal";
 
-function ProductDetails({ product, baseUrl }) {
+function ProductDetails({ product }) {
+  const [modalShow, setModalShow] = useState(false);
   const { products } = useSelector((state) => state.product);
   const { cartItems } = useSelector((state) => state.cart);
   const { wishlistItems } = useSelector((state) => state.wishlist);
   const { compareItems } = useSelector((state) => state.compare);
+  const latestdBlogs = getProducts(blogData, "buying", "featured", 4);
 
   const relatedProducts = getProducts(
     products,
@@ -62,7 +64,7 @@ function ProductDetails({ product, baseUrl }) {
     product.price,
     product.discount
   ).toFixed(2);
-  const latestdBlogs = getProducts(blogData, "buying", "featured", 4);
+
   const productPrice = product.price.toFixed(2);
   const cartItem = cartItems.find((cartItem) => cartItem.id === product.id);
   const wishlistItem = wishlistItems.find(
@@ -71,7 +73,6 @@ function ProductDetails({ product, baseUrl }) {
   const compareItem = compareItems.find(
     (compareItem) => compareItem.id === product.id
   );
-
 
   const SlickArrowLeft = ({ currentSlide, slideCount, ...props }) => (
     <button
@@ -183,7 +184,7 @@ function ProductDetails({ product, baseUrl }) {
         {/* <!-- BREADCRUMB AREA START --> */}
 
         <BreadCrumb
-          title="Product Details"
+          title="Project Details"
           sectionPace="mb-0"
           currentSlug={product.title}
         />
@@ -222,7 +223,7 @@ function ProductDetails({ product, baseUrl }) {
             <div className="row">
               <div className="col-lg-8 col-md-12">
                 <div className="ltn__shop-details-inner ltn__page-details-inner mb-60">
-                  <div className="ltn__blog-meta">
+                  {/* <div className="ltn__blog-meta">
                     <ul>
                       {
                         (product.featured ? (
@@ -232,15 +233,15 @@ function ProductDetails({ product, baseUrl }) {
                         ) : (
                           ""
                         ),
-                          product.rent ? (
-                            <li className="ltn__blog-category">
-                              <Link className="bg-orange" href="#">
-                                For Rent
-                              </Link>
-                            </li>
-                          ) : (
-                            ""
-                          ))
+                        product.rent ? (
+                          <li className="ltn__blog-category">
+                            <Link className="bg-orange" href="#">
+                              For Rent
+                            </Link>
+                          </li>
+                        ) : (
+                          ""
+                        ))
                       }
 
                       <li className="ltn__blog-date">
@@ -255,19 +256,28 @@ function ProductDetails({ product, baseUrl }) {
                         </a>
                       </li>
                     </ul>
-                  </div>
+                  </div> */}
                   <h1> {product.title}</h1>
-                  <label>
+                  <label style={{ color: "#111111" }}>
                     <span className="ltn__secondary-color">
                       <i className="flaticon-pin"></i>
                     </span>{" "}
                     {product.locantion}
                   </label>
                   <h4 className="title-2"> {product.description.title}</h4>
-                  <p>{product.description.fullDescription}</p>
-                  <p>{product.description.shortDescription}</p>
-
-                  <h4 className="title-2">Property Detail</h4>
+                  <p style={{ color: "#111111" }}>
+                    {product.description.fullDescription}
+                  </p>
+                  <p style={{ color: "#111111" }}>
+                    {product.description.shortDescription}
+                  </p>
+                  <button
+                    onClick={() => setModalShow(true)}
+                    className="btn theme-btn-1"
+                  >
+                    Download Brochure
+                  </button>
+                  {/* <h4 className="title-2">Property Detail</h4>
                   <div className="property-detail-info-list section-bg-1 clearfix mb-60">
                     <ul>
                       <li>
@@ -312,9 +322,9 @@ function ProductDetails({ product, baseUrl }) {
                         <span>{product.propertyDetails.propertyStatus}</span>
                       </li>
                     </ul>
-                  </div>
+                  </div> */}
 
-                  <h4 className="title-2">Facts and Features</h4>
+                  {/* <h4 className="title-2">Facts and Features</h4>
                   <div className="property-detail-feature-list clearfix mb-45">
                     <ul>
                       <li>
@@ -390,7 +400,7 @@ function ProductDetails({ product, baseUrl }) {
                         </div>
                       </li>
                     </ul>
-                  </div>
+                  </div> */}
 
                   <h4 className="title-2">From Our Gallery</h4>
                   <div className="ltn__property-details-gallery mb-30">
@@ -438,7 +448,7 @@ function ProductDetails({ product, baseUrl }) {
                     <div className="row">
                       <div className="col-lg-4 col-md-6">
                         <div className="ltn__menu-widget">
-                          <ul>
+                          <ul style={{ color: "#111111" }}>
                             {product.amenities1.map((single, key) => {
                               return (
                                 <li key={key}>
@@ -458,7 +468,7 @@ function ProductDetails({ product, baseUrl }) {
                       </div>
                       <div className="col-lg-4 col-md-6">
                         <div className="ltn__menu-widget">
-                          <ul>
+                          <ul style={{ color: "#111111" }}>
                             {product.amenities2.map((single, key) => {
                               return (
                                 <li key={key}>
@@ -478,7 +488,7 @@ function ProductDetails({ product, baseUrl }) {
                       </div>
                       <div className="col-lg-4 col-md-6">
                         <div className="ltn__menu-widget">
-                          <ul>
+                          <ul style={{ color: "#111111" }}>
                             {product.amenities3.map((single, key) => {
                               return (
                                 <li key={key}>
@@ -502,18 +512,20 @@ function ProductDetails({ product, baseUrl }) {
                   <h4 className="title-2">Location</h4>
                   <div className="property-details-google-map mb-60">
                     <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9334.271551495209!2d-73.97198251485975!3d40.668170674982946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25b0456b5a2e7%3A0x68bdf865dda0b669!2sBrooklyn%20Botanic%20Garden%20Shop!5e0!3m2!1sen!2sbd!4v1590597267201!5m2!1sen!2sbd"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3623.050931820203!2d55.2733858751094!3d25.18504983169096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f693afb4babe9%3A0xdda585df6ed9b8ae!2sClover%20Bay%20Tower!5e0!3m2!1sen!2s!4v1708700000000"
                       width="100%"
                       height="100%"
-                      frameBorder="0"
+                      style={{ border: 0 }}
                       allowFullScreen=""
-                    ></iframe>
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                    />
                   </div>
 
-                  <h4 className="title-2">Floor Plans</h4>
+                  {/* <h4 className="title-2">Floor Plans</h4> */}
                   {/* <!-- APARTMENTS PLAN AREA START --> */}
 
-                  <div className="ltn__apartments-plan-area product-details-apartments-plan mb-60">
+                  {/* <div className="ltn__apartments-plan-area product-details-apartments-plan mb-60">
                     <Tab.Container defaultActiveKey="first">
                       <div className="ltn__tab-menu ltn__tab-menu-3">
                         <Nav className="nav">
@@ -754,11 +766,11 @@ function ProductDetails({ product, baseUrl }) {
                         </Tab.Pane>
                       </Tab.Content>
                     </Tab.Container>
-                  </div>
+                  </div> */}
 
                   {/* <!-- APARTMENTS PLAN AREA END --> */}
 
-                  <h4 className="title-2">Property Video</h4>
+                  {/* <h4 className="title-2">Property Video</h4>
                   <div
                     className="ltn__video-bg-img ltn__video-popup-height-500 bg-overlay-black-50 bg-image mb-60"
                     style={{ backgroundImage: `url("../../img/others/5.jpg")` }}
@@ -769,9 +781,9 @@ function ProductDetails({ product, baseUrl }) {
                     >
                       <FaPlay />
                     </button>
-                  </div>
+                  </div> */}
 
-                  <div className="ltn__shop-details-tab-content-inner--- ltn__shop-details-tab-inner-2 ltn__product-details-review-inner mb-60">
+                  {/* <div className="ltn__shop-details-tab-content-inner--- ltn__shop-details-tab-inner-2 ltn__product-details-review-inner mb-60">
                     <h4 className="title-2">Customer Reviews</h4>
                     <div className="product-ratting">
                       <ul>
@@ -806,7 +818,6 @@ function ProductDetails({ product, baseUrl }) {
                       </ul>
                     </div>
                     <hr />
-                    {/* <!-- comment-area --> */}
                     <div className="ltn__comment-area mb-30">
                       <div className="ltn__comment-inner">
                         <ul>
@@ -960,7 +971,6 @@ function ProductDetails({ product, baseUrl }) {
                         </ul>
                       </div>
                     </div>
-                    {/* <!-- comment-reply --> */}
                     <div className="ltn__comment-reply-area ltn__form-box mb-30">
                       <form action="#">
                         <h4>Add a Review</h4>
@@ -1044,7 +1054,7 @@ function ProductDetails({ product, baseUrl }) {
                         </div>
                       </form>
                     </div>
-                  </div>
+                  </div> */}
 
                   <h4 className="title-2">Related Properties</h4>
                   <Row>
@@ -1069,7 +1079,7 @@ function ProductDetails({ product, baseUrl }) {
                           <RelatedProduct
                             productData={data}
                             slug={slug}
-                            baseUrl="shop/left-sidebar"
+                            baseUrl="projects/list"
                             discountedPrice={discountedPrice}
                             productPrice={productPrice}
                             cartItem={cartItem}
@@ -1085,8 +1095,7 @@ function ProductDetails({ product, baseUrl }) {
 
               <div className="col-lg-4">
                 <aside className="sidebar ltn__shop-sidebar ltn__right-sidebar---">
-                  {/* <!-- Author Widget --> */}
-                  <div className="widget ltn__author-widget">
+                  {/* <div className="widget ltn__author-widget">
                     <div className="ltn__author-widget-inner text-center">
                       <img
                         src={`/img/team/${product.agent.img}`}
@@ -1158,9 +1167,8 @@ function ProductDetails({ product, baseUrl }) {
                         </ul>
                       </div>
                     </div>
-                  </div>
-                  {/* <!-- Search Widget --> */}
-                  <div className="widget ltn__search-widget">
+                  </div> */}
+                  {/* <div className="widget ltn__search-widget">
                     <h4 className="ltn__widget-title ltn__widget-title-border-2">
                       Search Objects
                     </h4>
@@ -1174,10 +1182,12 @@ function ProductDetails({ product, baseUrl }) {
                         <FaSearch />
                       </button>
                     </form>
-                  </div>
-                  {/* <!-- Form Widget --> */}
-                  <div className="widget ltn__form-widget">
-                    <h4 className="ltn__widget-title ltn__widget-title-border-2">
+                  </div> */}
+                  <div
+                    className="widget ltn__form-widget"
+                    style={{ backgroundColor: "#01356d" }}
+                  >
+                    <h4 className="ltn__widget-title ltn__widget-title-border-2 text-white">
                       Drop Messege For Book
                     </h4>
                     <form action="#">
@@ -1201,7 +1211,7 @@ function ProductDetails({ product, baseUrl }) {
                     </form>
                   </div>
                   {/* <!-- Top Rated Product Widget --> */}
-                  <div className="widget ltn__top-rated-product-widget">
+                  {/* <div className="widget ltn__top-rated-product-widget">
                     <h4 className="ltn__widget-title ltn__widget-title-border-2">
                       Top Rated Product
                     </h4>
@@ -1263,9 +1273,9 @@ function ProductDetails({ product, baseUrl }) {
                         );
                       })}
                     </ul>
-                  </div>
+                  </div> */}
                   {/* <!-- Menu Widget (Category) --> */}
-                  <div className="widget ltn__menu-widget ltn__menu-widget-2--- ltn__menu-widget-2-color-2---">
+                  {/* <div className="widget ltn__menu-widget ltn__menu-widget-2--- ltn__menu-widget-2-color-2---">
                     <h4 className="ltn__widget-title ltn__widget-title-border-2">
                       Top Categories
                     </h4>
@@ -1296,9 +1306,9 @@ function ProductDetails({ product, baseUrl }) {
                         </Link>
                       </li>
                     </ul>
-                  </div>
+                  </div> */}
                   {/* <!-- Popular Product Widget --> */}
-                  <div className="widget ltn__popular-product-widget">
+                  {/* <div className="widget ltn__popular-product-widget">
                     <h4 className="ltn__widget-title ltn__widget-title-border-2">
                       Popular Properties
                     </h4>
@@ -1307,8 +1317,6 @@ function ProductDetails({ product, baseUrl }) {
                       {...popular_product}
                       className="row ltn__popular-product-widget-active slick-arrow-1"
                     >
-                      {/* <!-- ltn__product-item --> */}
-
                       {popularProducts.map((product, key) => {
                         const slug = productSlug(product.title);
                         return (
@@ -1372,9 +1380,9 @@ function ProductDetails({ product, baseUrl }) {
                         );
                       })}
                     </Slider>
-                  </div>
+                  </div> */}
                   {/* <!-- Popular Post Widget --> */}
-                  <div className="widget ltn__popular-post-widget">
+                  {/* <div className="widget ltn__popular-post-widget">
                     <h4 className="ltn__widget-title ltn__widget-title-border-2">
                       Leatest Blogs
                     </h4>
@@ -1418,13 +1426,13 @@ function ProductDetails({ product, baseUrl }) {
                         );
                       })}
                     </ul>
-                  </div>
+                  </div> */}
 
                   <FollowUs title="Follow Us" />
 
                   {/* <!-- Tagcloud Widget --> */}
 
-                  <Tags title="Popular Tags" />
+                  {/* <Tags title="Popular Tags" /> */}
                 </aside>
               </div>
             </div>
@@ -1433,18 +1441,34 @@ function ProductDetails({ product, baseUrl }) {
         {/* <!-- SHOP DETAILS AREA END -->
 
     <!-- CALL TO ACTION START (call-to-action-6) --> */}
-        <div className="ltn__call-to-action-area call-to-action-6 before-bg-bottom">
-          <Container>
-            <Row>
-              <Col xs={12}>
-                <CallToAction />
-              </Col>
-            </Row>
-          </Container>
-        </div>
+        {/* <div
+          className="ltn__call-to-action-area call-to-action-6 before-bg-bottom"
+          data-bs-bg="img/1.jpg--"
+        >
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-12">
+                <div className="call-to-action-inner call-to-action-inner-6 ltn__secondary-bg position-relative text-center---">
+                  <div className="coll-to-info text-color-white">
+                    <h1>Looking for a dream home?</h1>
+                    <p>We can help you realize your dream of a new home</p>
+                  </div>
+                  <div className="btn-wrapper">
+                    <Link
+                      className="btn btn-effect-3 btn-white"
+                      href="/contact"
+                    >
+                      Explore Properties <i className="icon-next"></i>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> */}
         {/* <!-- CALL TO ACTION END --> */}
       </LayoutOne>
-
+      <QuickViewtModal show={modalShow} onHide={() => setModalShow(false)} />
     </>
   );
 }

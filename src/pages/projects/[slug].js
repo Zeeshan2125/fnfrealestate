@@ -2,16 +2,6 @@ import { useState } from "react";
 import ModalVideo from "react-modal-video";
 import Link from "next/link";
 import Slider from "react-slick";
-import BreadCrumb from "@/components/breadCrumbs";
-import { LayoutOne } from "@/layouts";
-import { useSelector } from "react-redux";
-import { getProducts, productSlug, getDiscountPrice } from "@/lib/product";
-import products from "@/data/products.json";
-import { Container, Row, Col, Nav, Tab } from "react-bootstrap";
-import RelatedProduct from "@/components/product/related-product";
-import FollowUs from "@/components/followUs";
-import Tags from "@/components/tags";
-import blogData from "@/data/blog";
 import {
   FaArrowRight,
   FaArrowLeft,
@@ -28,16 +18,27 @@ import {
   FaEnvelope,
   FaGlobe,
   FaPencilAlt,
-  FaCalendarAlt
+  FaCalendarAlt,
 } from "react-icons/fa";
-import CallToAction from "@/components/callToAction";
+import BreadCrumb from "@/components/breadCrumbs";
 
+import { LayoutOne } from "@/layouts";
+import { useSelector } from "react-redux";
+import { getProducts, productSlug, getDiscountPrice } from "@/lib/product";
+import products from "@/data/products.json";
+import { Container, Row, Col, Nav, Tab } from "react-bootstrap";
+import RelatedProduct from "@/components/product/related-product";
+import FollowUs from "@/components/followUs";
+import Tags from "@/components/tags";
+import blogData from "@/data/blog";
+import CallToAction from "@/components/callToAction";
 
 function ProductDetails({ product }) {
   const { products } = useSelector((state) => state.product);
   const { cartItems } = useSelector((state) => state.cart);
   const { wishlistItems } = useSelector((state) => state.wishlist);
   const { compareItems } = useSelector((state) => state.compare);
+  const latestdBlogs = getProducts(blogData, "buying", "featured", 4);
 
   const relatedProducts = getProducts(
     products,
@@ -63,7 +64,7 @@ function ProductDetails({ product }) {
     product.price,
     product.discount
   ).toFixed(2);
-  const latestdBlogs = getProducts(blogData, "buying", "featured", 4);
+
   const productPrice = product.price.toFixed(2);
   const cartItem = cartItems.find((cartItem) => cartItem.id === product.id);
   const wishlistItem = wishlistItems.find(
@@ -72,7 +73,6 @@ function ProductDetails({ product }) {
   const compareItem = compareItems.find(
     (compareItem) => compareItem.id === product.id
   );
-
 
   const SlickArrowLeft = ({ currentSlide, slideCount, ...props }) => (
     <button
@@ -163,14 +163,8 @@ function ProductDetails({ product }) {
     arrows: false,
   };
 
-  const [quickViewShow, SetQuickViewShow] = useState(false);
-  const quickViewCloseHandle = () => SetQuickViewShow(false);
-  const showQuickViewHandle = () => SetQuickViewShow(true);
-
-  const [wishlistShow, SetWishlistShow] = useState(false);
-  const wishlistCloseHandle = () => SetWishlistShow(false);
-  const showWishlistHandle = () => SetWishlistShow(true);
   const [isOpen, setOpen] = useState(false);
+
   return (
     <>
       <LayoutOne topbar={true}>
@@ -184,7 +178,7 @@ function ProductDetails({ product }) {
         {/* <!-- BREADCRUMB AREA START --> */}
 
         <BreadCrumb
-          title="Product Details"
+          title="Project Details"
           sectionPace="mb-0"
           currentSlug={product.title}
         />
@@ -193,22 +187,20 @@ function ProductDetails({ product }) {
 
         {/* <!-- IMAGE SLIDER AREA START (img-slider-3) --> */}
         <div className="ltn__img-slider-area mb-90">
-          <Container fluid>
+          <Container fluid className="px-0">
             <Slider
               {...productDetailsCarouselSettings}
-              className="row ltn__image-slider-5-active slick-arrow-1 slick-arrow-1-inner ltn__no-gutter-all g-0"
+              className="ltn__image-slider-5-active slick-arrow-1 slick-arrow-1-inner"
             >
               {product.carousel.map((single, key) => {
                 return (
-                  <div className="col-lg-12" key={key}>
-                    <div className="ltn__img-slide-item-4">
-                      <Link href="#?">
-                        <img
-                          src={`/img/img-slide/${single.img}`}
-                          alt={`${single.title}`}
-                        />
-                      </Link>
-                    </div>
+                  <div className="ltn__img-slide-item-4" key={key}>
+                    <Link href="#">
+                      <img
+                        src={`/img/img-slide/${single.img}`}
+                        alt={`${single.title}`}
+                      />
+                    </Link>
                   </div>
                 );
               })}
@@ -220,8 +212,8 @@ function ProductDetails({ product }) {
     <!-- SHOP DETAILS AREA START --> */}
         <div className="ltn__shop-details-area pb-10">
           <Container>
-            <div className="row">
-              <div className="col-lg-8 col-md-12">
+            <Row>
+              <Col xs={12} lg={8}>
                 <div className="ltn__shop-details-inner ltn__page-details-inner mb-60">
                   <div className="ltn__blog-meta">
                     <ul>
@@ -233,15 +225,15 @@ function ProductDetails({ product }) {
                         ) : (
                           ""
                         ),
-                          product.rent ? (
-                            <li className="ltn__blog-category">
-                              <Link className="bg-orange" href="#">
-                                For Rent
-                              </Link>
-                            </li>
-                          ) : (
-                            ""
-                          ))
+                        product.rent ? (
+                          <li className="ltn__blog-category">
+                            <Link className="bg-orange" href="#">
+                              For Rent
+                            </Link>
+                          </li>
+                        ) : (
+                          ""
+                        ))
                       }
 
                       <li className="ltn__blog-date">
@@ -1070,7 +1062,7 @@ function ProductDetails({ product }) {
                           <RelatedProduct
                             productData={data}
                             slug={slug}
-                            baseUrl="shop/right-sidebar"
+                            baseUrl="shop"
                             discountedPrice={discountedPrice}
                             productPrice={productPrice}
                             cartItem={cartItem}
@@ -1082,9 +1074,9 @@ function ProductDetails({ product }) {
                     })}
                   </Row>
                 </div>
-              </div>
+              </Col>
 
-              <div className="col-lg-4">
+              <Col xs={12} lg={4}>
                 <aside className="sidebar ltn__shop-sidebar ltn__right-sidebar---">
                   {/* <!-- Author Widget --> */}
                   <div className="widget ltn__author-widget">
@@ -1214,7 +1206,7 @@ function ProductDetails({ product }) {
                           <li key={product.id}>
                             <div className="top-rated-product-item clearfix">
                               <div className="top-rated-product-img">
-                                <a href={slug}>
+                                <a href={`/shop/${slug}`}>
                                   <img
                                     src={`/img/product/${key}.png`}
                                     alt={product.title}
@@ -1252,7 +1244,7 @@ function ProductDetails({ product }) {
                                   </ul>
                                 </div>
                                 <h6>
-                                  <a href={slug}>{product.title}</a>
+                                  <a href={`/shop/${slug}`}>{product.title}</a>
                                 </h6>
                                 <div className="product-price">
                                   <span>${product.price}</span>
@@ -1318,7 +1310,7 @@ function ProductDetails({ product }) {
                             className="ltn__product-item ltn__product-item-4 ltn__product-item-5 text-center---"
                           >
                             <div className="product-img">
-                              <Link href={slug}>
+                              <Link href={`/shop/${slug}`}>
                                 <img
                                   src={`/img/product-3/${product.productImg}`}
                                   alt={slug}
@@ -1326,7 +1318,7 @@ function ProductDetails({ product }) {
                               </Link>
                               <div className="real-estate-agent">
                                 <div className="agent-img">
-                                  <Link href={slug}>
+                                  <Link href="#">
                                     <img src={`/img/blog/author.jpg`} alt="#" />
                                   </Link>
                                 </div>
@@ -1340,7 +1332,9 @@ function ProductDetails({ product }) {
                                 </span>
                               </div>
                               <h2 className="product-title">
-                                <Link href={slug}>{product.title}</Link>
+                                <Link href={`/shop/${slug}`}>
+                                  {product.title}
+                                </Link>
                               </h2>
                               <div className="product-img-location">
                                 <ul>
@@ -1427,8 +1421,8 @@ function ProductDetails({ product }) {
 
                   <Tags title="Popular Tags" />
                 </aside>
-              </div>
-            </div>
+              </Col>
+            </Row>
           </Container>
         </div>
         {/* <!-- SHOP DETAILS AREA END -->
@@ -1445,7 +1439,6 @@ function ProductDetails({ product }) {
         </div>
         {/* <!-- CALL TO ACTION END --> */}
       </LayoutOne>
-
     </>
   );
 }

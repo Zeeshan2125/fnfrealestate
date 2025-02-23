@@ -279,7 +279,7 @@
 .ltn__product-item-4 {
   box-shadow: var(--ltn__box-shadow-4);
   border: 1px solid;
-  border-color: var(--border-color-13);
+  border-color: transparent;
   background-color: transparent;
   .product-img {
     position: relative;
@@ -471,7 +471,7 @@
     margin-bottom: 20px;
     li {
       list-style: none;
-      display: inline-block;
+      // display: inline-block;
       margin-right: 10px;
       font-size: 14px;
       &:last-child {
@@ -840,7 +840,7 @@
 }
 
 /* ----------------------------------------------------
-    Product Details
+    Project Details
 ---------------------------------------------------- */
 .ltn__small-product-item {
   display: flex;
@@ -863,7 +863,7 @@
 }
 
 /* ----------------------------------------------------
-    Product Details
+    Project Details
 ---------------------------------------------------- */
 .product-meta-date input[type="date"] {
   border: 1px solid #ddd;
@@ -1246,6 +1246,7 @@
   font-weight: 500;
   font-size: 16px;
   font-family: var(--ltn__heading-font);
+  color: #111111;
 }
 
 .ltn__product-list-view .product-title {

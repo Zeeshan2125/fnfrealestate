@@ -70,9 +70,10 @@ const RelatedProduct = ({
           <div className="product-badge">
             <ul>
               <li
-                className={`sale-badge ${productData.rent ? "bg-green" : ""}`}
+                className={`sale-badge text-white`}
+                style={{ backgroundColor: "#01356d" }}
               >
-                {badgeText}
+                {productData.projectType}
               </li>
             </ul>
           </div>
@@ -81,29 +82,50 @@ const RelatedProduct = ({
           </h2>
           <div className="product-img-location">
             <ul>
-              <li>
-                <Link href={`/${baseUrl}/${slug}`}>
-                  <i className="flaticon-pin"></i>
-                  {productData.locantion}
-                </Link>
+              <li
+                className="d-flex gap-2 align-items-center"
+                style={{ color: "#9b2727", fontWeight: "600" }}
+              >
+                {/* <Link href={`/${baseUrl}/${slug}`}> */}
+                <i className="flaticon-pin"></i>
+                {productData.locantion}
+                {/* </Link> */}
               </li>
             </ul>
           </div>
-          <ul className="ltn__plot-brief">
-            <li>
-              <span>{productData.propertyDetails.bedrooms}</span>
-              <span className="ms-1">Bedrooms</span>
+          <ul className="ltn__plot-brief" style={{ color: "#111111" }}>
+            <li className="d-flex justify-content-between mt-3 me-0">
+              <span className="" style={{ fontWeight: "400" }}>
+                Developer:
+              </span>
+              <span className="" style={{ fontWeight: "700" }}>
+                {productData.developer}
+              </span>
             </li>
-            <li>
-              <span>{productData.propertyDetails.baths}</span>
-              <span className="ms-1">Bathrooms</span>
+            {/* <li className="d-flex justify-content-between mt-2 me-0">
+              <span className="">Project Type:</span>
+              <span className="" style={{ fontWeight: "800" }}>
+                {productData.projectType}
+              </span>
+            </li> */}
+            <li className="d-flex justify-content-between mt-1 me-0">
+              <span className="" style={{ fontWeight: "400" }}>
+                Payment Plan:
+              </span>
+              <span className="" style={{ fontWeight: "700" }}>
+                {productData.paymentPlan}
+              </span>
             </li>
-            <li>
-              <span>{productData.propertyDetails.area}</span>
-              <span className="ms-1">square Ft</span>
+            <li className="d-flex justify-content-between mt-1 me-0">
+              <span className="" style={{ fontWeight: "400" }}>
+                Handover Date:
+              </span>
+              <span className="" style={{ fontWeight: "700" }}>
+                {productData.handoverDate}
+              </span>
             </li>
           </ul>
-          <div className="product-hover-action">
+          {/* <div className="product-hover-action">
             <ul>
               <li>
                 <OverlayTrigger
@@ -145,13 +167,17 @@ const RelatedProduct = ({
                 </OverlayTrigger>
               </li>
             </ul>
-          </div>
+          </div> */}
         </div>
-        <div className="product-info-bottom">
+        <div
+          className="product-info-bottom"
+          style={{ backgroundColor: "#9b2727" }}
+        >
           <div className="product-price">
-            <span>
-              {`$ ${productData.price}`}
-              <label>/Month</label>
+            <span className="text-white">
+              {/* {`$ ${productData.price}`} */}
+              {/* <label>/Month</label> */}
+              {productData.amount}
             </span>
           </div>
         </div>

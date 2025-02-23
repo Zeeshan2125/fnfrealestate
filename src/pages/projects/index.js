@@ -14,13 +14,14 @@ import {
   FaAngleDoubleRight,
 } from "react-icons/fa";
 import { Container, Row, Col, Nav, Tab, Form } from "react-bootstrap";
+import SideBar from "@/components/shopSideBar";
 import RelatedProduct from "@/components/product/related-product";
 import ProductList from "@/components/product/list";
 import Search from "@/components/search";
-import ReactPaginate from "react-paginate";
 import CallToAction from "@/components/callToAction";
+import ReactPaginate from "react-paginate";
 
-function ShopGrid() {
+function Shop() {
   const { products } = useSelector((state) => state.product);
   const [sortType, setSortType] = useState("");
   const [sortValue, setSortValue] = useState("");
@@ -28,14 +29,14 @@ function ShopGrid() {
   const [filterSortValue, setFilterSortValue] = useState("");
   const [offset, setOffset] = useState(0);
   const [sortedProducts, setSortedProducts] = useState([]);
-  const pageLimit = 6;
-  const [currentItems, setCurrentItems] = useState(products);
-  const [pageCount, setPageCount] = useState(0);
 
   const { cartItems } = useSelector((state) => state.cart);
   const { wishlistItems } = useSelector((state) => state.wishlist);
   const { compareItems } = useSelector((state) => state.compare);
 
+  const pageLimit = 6;
+  const [currentItems, setCurrentItems] = useState(products);
+  const [pageCount, setPageCount] = useState(0);
   const getSortParams = (sortType, sortValue) => {
     setSortType(sortType);
     setSortValue(sortValue);
@@ -53,7 +54,6 @@ function ShopGrid() {
       keys.some((key) => item[key].toLowerCase().includes(query))
     );
   };
-
   useEffect(() => {
     let sortedProducts = getSortedProducts(products, sortType, sortValue);
 
@@ -64,6 +64,7 @@ function ShopGrid() {
     );
 
     sortedProducts = filterSortedProducts;
+
     setSortedProducts(sortedProducts);
 
     setCurrentItems(sortedProducts.slice(offset, offset + pageLimit));
@@ -96,18 +97,17 @@ function ShopGrid() {
     <LayoutOne topbar={true}>
       {/* <!-- BREADCRUMB AREA START --> */}
 
-      <ShopBreadCrumb title="Projects" sectionPace="" currentSlug="Projects" />
+      <ShopBreadCrumb title="Property" sectionPace="" currentSlug="Property" />
       {/* <!-- BREADCRUMB AREA END -->
     
-    <!-- PRODUCT DETAILS AREA START --> */}
-
+    <!-- Project Details AREA START --> */}
       <div className="ltn__product-area ltn__product-gutter mb-120">
         <Container>
           <Row>
-            <Col xs={12}>
+            <Col xs={12} lg={8}>
               <Tab.Container defaultActiveKey="first">
                 <div className="ltn__shop-options">
-                  <ul>
+                  <ul className="justify-content-between">
                     <li>
                       <div className="ltn__grid-list-tab-menu">
                         <Nav className="nav">
@@ -139,26 +139,17 @@ function ShopGrid() {
                         </Form.Select>
                       </div>
                     </li>
-                    <li>
-                      <div className="showing-product-number text-right">
-                        <span>
-                          {`Showing ${offset + pageLimit} of ${
-                            sortedProducts.length
-                          } results`}
-                        </span>
-                      </div>
-                    </li>
                   </ul>
                 </div>
 
                 <Search spaceBottom="mb-30" setQuery={setQuery} />
+
                 <Tab.Content>
                   <Tab.Pane eventKey="first">
                     <div className="ltn__product-tab-content-inner ltn__product-grid-view">
                       <Row>
                         {currentItems.map((product, key) => {
                           const slug = productSlug(product.title);
-
                           const discountedPrice = getDiscountPrice(
                             product.price,
                             product.discount
@@ -173,12 +164,11 @@ function ShopGrid() {
                           const compareItem = compareItems.find(
                             (compareItem) => compareItem.id === product.id
                           );
-
                           return (
-                            <Col key={key} xs={12} sm={6} lg={4}>
+                            <Col key={key} xs={12} sm={6}>
                               <RelatedProduct
                                 slug={slug}
-                                baseUrl="shop/grid"
+                                baseUrl="shop"
                                 productData={product}
                                 discountedPrice={discountedPrice}
                                 productPrice={productPrice}
@@ -211,12 +201,11 @@ function ShopGrid() {
                           const compareItem = compareItems.find(
                             (compareItem) => compareItem.id === product.id
                           );
-
                           return (
                             <Col key={key} xs={12}>
                               <ProductList
                                 slug={slug}
-                                baseUrl="shop/grid"
+                                baseUrl="shop"
                                 productData={product}
                                 discountedPrice={discountedPrice}
                                 productPrice={productPrice}
@@ -256,13 +245,16 @@ function ShopGrid() {
                 />
               </div>
             </Col>
+            <Col xs={12} lg={4}>
+              <SideBar products={products} getSortParams={getSortParams} />
+            </Col>
           </Row>
         </Container>
       </div>
-      {/* <!-- PRODUCT DETAILS AREA END -->
+      {/* <!-- Project Details AREA END -->
 
     <!-- CALL TO ACTION START (call-to-action-6) --> */}
-      {/* <div className="ltn__call-to-action-area call-to-action-6 before-bg-bottom">
+      <div className="ltn__call-to-action-area call-to-action-6 before-bg-bottom">
         <Container>
           <Row>
             <Col xs={12}>
@@ -270,10 +262,10 @@ function ShopGrid() {
             </Col>
           </Row>
         </Container>
-      </div> */}
+      </div>
       {/* <!-- CALL TO ACTION END --> */}
     </LayoutOne>
   );
 }
 
-export default ShopGrid;
+export default Shop;

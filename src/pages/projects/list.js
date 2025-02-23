@@ -1,7 +1,11 @@
 import { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import ShopBreadCrumb from "@/components/breadCrumbs/shop";
-import { getSortedProducts, productSlug ,getDiscountPrice} from "@/lib/product";
+import {
+  getSortedProducts,
+  productSlug,
+  getDiscountPrice,
+} from "@/lib/product";
 import { LayoutOne } from "@/layouts";
 import {
   FaThLarge,
@@ -10,14 +14,13 @@ import {
   FaAngleDoubleRight,
 } from "react-icons/fa";
 import { Container, Row, Col, Nav, Tab, Form } from "react-bootstrap";
-import SideBar from "@/components/shopSideBar";
 import RelatedProduct from "@/components/product/related-product";
 import ProductList from "@/components/product/list";
 import Search from "@/components/search";
 import ReactPaginate from "react-paginate";
 import CallToAction from "@/components/callToAction";
 
-function ShopLeftSideBar() {
+function ShopGrid() {
   const { products } = useSelector((state) => state.product);
   const [sortType, setSortType] = useState("");
   const [sortValue, setSortValue] = useState("");
@@ -32,6 +35,7 @@ function ShopLeftSideBar() {
   const { cartItems } = useSelector((state) => state.cart);
   const { wishlistItems } = useSelector((state) => state.wishlist);
   const { compareItems } = useSelector((state) => state.compare);
+
   const getSortParams = (sortType, sortValue) => {
     setSortType(sortType);
     setSortValue(sortValue);
@@ -49,6 +53,7 @@ function ShopLeftSideBar() {
       keys.some((key) => item[key].toLowerCase().includes(query))
     );
   };
+
   useEffect(() => {
     let sortedProducts = getSortedProducts(products, sortType, sortValue);
 
@@ -59,7 +64,6 @@ function ShopLeftSideBar() {
     );
 
     sortedProducts = filterSortedProducts;
-
     setSortedProducts(sortedProducts);
 
     setCurrentItems(sortedProducts.slice(offset, offset + pageLimit));
@@ -92,21 +96,18 @@ function ShopLeftSideBar() {
     <LayoutOne topbar={true}>
       {/* <!-- BREADCRUMB AREA START --> */}
 
-      <ShopBreadCrumb
-        title="Property Left Sidebar"
-        sectionPace=""
-        currentSlug="Property Left Sidebar"
-      />
+      <ShopBreadCrumb title="Projects" sectionPace="" currentSlug="Projects" />
       {/* <!-- BREADCRUMB AREA END -->
     
-    <!-- PRODUCT DETAILS AREA START --> */}
+    <!-- Project Details AREA START --> */}
+
       <div className="ltn__product-area ltn__product-gutter mb-120">
         <Container>
           <Row>
-            <Col xs={12} lg={{ span: 8, order: 1 }}>
+            <Col xs={12}>
               <Tab.Container defaultActiveKey="first">
                 <div className="ltn__shop-options">
-                  <ul className="justify-content-between">
+                  <ul>
                     <li>
                       <div className="ltn__grid-list-tab-menu">
                         <Nav className="nav">
@@ -138,17 +139,26 @@ function ShopLeftSideBar() {
                         </Form.Select>
                       </div>
                     </li>
+                    <li>
+                      <div className="showing-product-number text-right">
+                        <span>
+                          {`Showing ${offset + pageLimit} of ${
+                            sortedProducts.length
+                          } results`}
+                        </span>
+                      </div>
+                    </li>
                   </ul>
                 </div>
 
                 <Search spaceBottom="mb-30" setQuery={setQuery} />
-
                 <Tab.Content>
                   <Tab.Pane eventKey="first">
                     <div className="ltn__product-tab-content-inner ltn__product-grid-view">
                       <Row>
                         {currentItems.map((product, key) => {
                           const slug = productSlug(product.title);
+
                           const discountedPrice = getDiscountPrice(
                             product.price,
                             product.discount
@@ -163,13 +173,14 @@ function ShopLeftSideBar() {
                           const compareItem = compareItems.find(
                             (compareItem) => compareItem.id === product.id
                           );
+
                           return (
-                            <Col key={key} xs={12} sm={6}>
+                            <Col key={key} xs={12} sm={6} lg={4}>
                               <RelatedProduct
                                 slug={slug}
-                                baseUrl="shop/left-sidebar"
+                                baseUrl="projects/list"
                                 productData={product}
-                                 discountedPrice={discountedPrice}
+                                discountedPrice={discountedPrice}
                                 productPrice={productPrice}
                                 cartItem={cartItem}
                                 wishlistItem={wishlistItem}
@@ -200,13 +211,14 @@ function ShopLeftSideBar() {
                           const compareItem = compareItems.find(
                             (compareItem) => compareItem.id === product.id
                           );
+
                           return (
                             <Col key={key} xs={12}>
                               <ProductList
                                 slug={slug}
-                                baseUrl="shop/left-sidebar"
+                                baseUrl="projects/list"
                                 productData={product}
-                                 discountedPrice={discountedPrice}
+                                discountedPrice={discountedPrice}
                                 productPrice={productPrice}
                                 cartItem={cartItem}
                                 wishlistItem={wishlistItem}
@@ -244,16 +256,13 @@ function ShopLeftSideBar() {
                 />
               </div>
             </Col>
-            <Col xs={12} lg={{ span: 4, order: 0 }}>
-              <SideBar products={products} getSortParams={getSortParams} />
-            </Col>
           </Row>
         </Container>
       </div>
-      {/* <!-- PRODUCT DETAILS AREA END -->
+      {/* <!-- Project Details AREA END -->
 
     <!-- CALL TO ACTION START (call-to-action-6) --> */}
-      <div className="ltn__call-to-action-area call-to-action-6 before-bg-bottom">
+      {/* <div className="ltn__call-to-action-area call-to-action-6 before-bg-bottom">
         <Container>
           <Row>
             <Col xs={12}>
@@ -261,10 +270,10 @@ function ShopLeftSideBar() {
             </Col>
           </Row>
         </Container>
-      </div>
+      </div> */}
       {/* <!-- CALL TO ACTION END --> */}
     </LayoutOne>
   );
 }
 
-export default ShopLeftSideBar;
+export default ShopGrid;
