@@ -19,9 +19,13 @@ function AboutUsStyleOne({ sectionSpace }) {
       <div className={`ltn__about-us-area ${sectionSpace}`}>
         <Container>
           <Row>
-            <Col xs={12} lg={6} className="align-self-center">
+            <Col xs={12} lg={6}>
               <div className="about-us-img-wrap about-img-left">
-                <img src="/img/others/7.png" alt="About Us Image" />
+                <img
+                  src="/img/others/7.png"
+                  alt="About Us Image"
+                  style={{ borderRadius: "12px" }}
+                />
                 <div className="about-us-img-info about-us-img-info-2 about-us-img-info-3">
                   {/* <div className="ltn__video-img ltn__animation-pulse1">
                     <img src="/img/others/8.png" alt="video popup bg image" />
@@ -35,53 +39,41 @@ function AboutUsStyleOne({ sectionSpace }) {
                 </div>
               </div>
             </Col>
-            <Col xs={12} lg={6} className="align-self-center">
+            <Col xs={12} lg={6} style={{ alignSelf: "center" }}>
               <div className="about-us-info-wrap">
-                <div className="section-title-area mb-20">
+                <div className="section-title-area m-0">
                   <h6 className="section-subtitle section-subtitle-2 ltn__secondary-color">
                     About Us
                   </h6>
                   <h1 className="section-title">
-                    The Leading Real Estate Rental Marketplace<span>.</span>
+                    FNF, Turning Your Dream into Reality<span>.</span>
                   </h1>
                   <p>
-                    Over 39,000 people work for us in more than 70 countries all
-                    over the This breadth of global coverage, combined with
-                    specialist services
+                    Begin your journey with FNF and develop your dream and
+                    vision into a reality. Our service is crafted to support
+                    your unique needs, ensuring that your property journey is
+                    successful and aligned with your goals.
                   </p>
-                </div>
-                <ul className="ltn__list-item-half clearfix">
-                  <li>
-                    <i className="flaticon-home-2"></i>
-                    Smart Home Design
-                  </li>
-                  <li>
-                    <i className="flaticon-mountain"></i>
-                    Beautiful Scene Around
-                  </li>
-                  <li>
-                    <i className="flaticon-heart"></i>
-                    Exceptional Lifestyle
-                  </li>
-                  <li>
-                    <i className="flaticon-secure"></i>
-                    Complete 24/7 Security
-                  </li>
-                </ul>
-                <div className="ltn__callout bg-overlay-theme-05  mt-30">
                   <p>
-                    Enimad minim veniam quis nostrud exercitation <br />
-                    llamco laboris. Lorem ipsum dolor sit amet
+                    We provide tailored advice and solutions to ensure your
+                    investment aligns perfectly with your vision whether you’re
+                    searching for a dream home, a lucrative investment, or a
+                    prime commercial space, we’re here to turn your aspirations
+                    into reality. We offer exceptional services for those
+                    looking to invest, buy, sell, or rent residential and
+                    commercial properties within the luxurious landscape of the
+                    United Arab Emirates.
                   </p>
+                  <p>FNF, Turning your dream into reality.</p>
                 </div>
-                <div className="btn-wrapper animated">
+                {/* <div className="btn-wrapper animated">
                   <Link
                     href="/service"
                     className="theme-btn-1 btn btn-effect-1"
                   >
-                    OUR SERVICES
+                    More About Us
                   </Link>
-                </div>
+                </div> */}
               </div>
             </Col>
           </Row>

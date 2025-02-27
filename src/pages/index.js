@@ -234,7 +234,7 @@ function HomePage(props) {
         {/* <!-- CAR DEALER FORM AREA END -->
 
       <!-- ABOUT US AREA START --> */}
-        {/* <AboutUsStyleOne sectionSpace="pt-120 pb-90" /> */}
+        <AboutUsStyleOne sectionSpace="pt-120" />
         <div>
           <Container>
             <div className="ltn__team-area pt-115 pb-90">
