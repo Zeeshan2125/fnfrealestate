@@ -158,8 +158,8 @@ function MyAccount() {
                                           </div>
                                           <div className="footer-address-info">
                                             <p>
-                                              <Link href="tel:+0123-456789">
-                                                +0123-456789
+                                              <Link href="tel:04 3471009">
+                                                04 3471009
                                               </Link>
                                             </p>
                                           </div>

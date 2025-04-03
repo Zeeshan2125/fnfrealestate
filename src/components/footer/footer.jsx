@@ -111,7 +111,7 @@ const Footer = function () {
                           <FaPhoneAlt />
                         </div>
                         <div className="footer-address-info">
-                          <p>+0123-456789</p>
+                          <p>04 3471009</p>
                         </div>
                       </li>
                       <li>

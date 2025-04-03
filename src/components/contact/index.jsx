@@ -49,7 +49,7 @@ const Contact = () => {
                   <img src="/img/icons/11.png" alt="Icon Image" />
                 </div>
                 <h3>Phone Number</h3>
-                <p>+0123-456789</p>
+                <p>04 3471009</p>
               </div>
             </div>
           </div>

@@ -49,15 +49,32 @@ function HomePage(props) {
 
   const vision = [
     {
-      title: "Vision",
+      title: "Our Vision",
       shortDescription:
-        "This is our vison This is our vison This is our vison This is our vison This is our vison This is our vison This is our vison",
+        `At Facts and Figures real estate we envision becoming the premier real estate marketing
+powerhouse in Dubai, seamlessly connecting investors and homebuyers across the Gulf region and
+the world..
+Our goal is to revolutionize property marketing by leveraging cutting-edge digital strategies, AI-driven
+insights, and an unparalleled network of elite developers. We aim to provide an immersive, data-
+driven, and customer-centric experience that empowers clients to make informed real estate
+decisions with confidence.
+Whether you’re seeking a dream home, a high-yield investment, or a strategic business property, our
+platform is designed to showcase Dubai’s vibrant real estate landscape like never before.
+Join us in shaping the future of real estate marketing, where innovation meets excellence.`,
       icon: "/img/vision.png",
     },
     {
-      title: "Mission",
+      title: "Our Mission",
       shortDescription:
-        "This is our Mission This is our Mission This is our Mission This is our Mission This is our Mission This is our Mission",
+        `At Facts and Figures real estate, our mission is to redefine real estate marketing in Dubai by
+delivering innovative, data-driven, and customer-focused solutions that connect buyers, investors,
+and developers across the Gulf region and the world.
+We strive to provide a seamless, transparent, and engaging property discovery experience through
+cutting-edge digital marketing, immersive virtual tours, and AI-powered insights. Our goal is to
+showcase the finest real estate opportunities, empowering clients to make informed investment
+decisions with confidence.
+With a commitment to excellence, trust, and innovation, we aim to be the go-to platform for anyone
+looking to explore Dubai’s dynamic real estate market and beyond.`,
       icon: "/img/mission.png",
     },
   ];

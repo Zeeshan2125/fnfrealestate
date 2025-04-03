@@ -11,7 +11,7 @@ const callToActionstyleTwo = () => {
               <div className="call-to-action-inner call-to-action-inner-4 text-center">
                 <div className="section-title-area ltn__section-title-2">
                   <h6 className="section-subtitle text-black">{`//  any question you have  //`}</h6>
-                  <h1 className="section-title text-black">897-876-987-90</h1>
+                  <h1 className="section-title text-black">+971 544 440 610</h1>
                 </div>
                 <div className="btn-wrapper">
                   <Link
@@ -21,9 +21,10 @@ const callToActionstyleTwo = () => {
                     MAKE A CALL
                   </Link>
                   <Link
-                    href="/contact"
+                    href="https://wa.me/+971544440610"
                     className="btn btn-transparent btn-effect-3"
                     style={{ border: "1px solid #111111" }}
+                    target="_blank"
                   >
                     CHAT ON WHATSAPP
                   </Link>

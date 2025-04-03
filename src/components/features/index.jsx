@@ -37,7 +37,7 @@ function Feature({
             {data?.map((item, key) => {
               const slug = productSlug(item.title);
               return (
-                <Col key={key} xs={12} sm={6} lg={4}>
+                <Col key={key} xs={12} sm={6} lg={6}>
                   <div
                     style={{ backgroundColor: "#034e9e" }}
                     className={`ltn__feature-item ltn__feature-item-6 text-center  box-shadow-1 ${
