@@ -50,8 +50,7 @@ function HomePage(props) {
   const vision = [
     {
       title: "Our Vision",
-      shortDescription:
-        `At Facts and Figures real estate we envision becoming the premier real estate marketing
+      shortDescription: `At Facts and Figures real estate we envision becoming the premier real estate marketing
 powerhouse in Dubai, seamlessly connecting investors and homebuyers across the Gulf region and
 the world..
 Our goal is to revolutionize property marketing by leveraging cutting-edge digital strategies, AI-driven
@@ -65,8 +64,7 @@ Join us in shaping the future of real estate marketing, where innovation meets e
     },
     {
       title: "Our Mission",
-      shortDescription:
-        `At Facts and Figures real estate, our mission is to redefine real estate marketing in Dubai by
+      shortDescription: `At Facts and Figures real estate, our mission is to redefine real estate marketing in Dubai by
 delivering innovative, data-driven, and customer-focused solutions that connect buyers, investors,
 and developers across the Gulf region and the world.
 We strive to provide a seamless, transparent, and engaging property discovery experience through
